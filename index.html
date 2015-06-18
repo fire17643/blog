@@ -110,7 +110,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(18)</small></a></li>
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(17)</small></a></li>
 				    
 				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
 				    
@@ -233,16 +233,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/JavaScript定义类的几种方式/">JavaScript定义类的几种方式</a></h3>
+                    <h3><a href="/blog/2015/06/18/前端优化总结/">前端性能优化</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2015-06-18T07:54:42.456Z" itemprop="datePublished">
+      <time datetime="2015-06-18T09:04:11.646Z" itemprop="datePublished">
           06/18 2015
       </time>
     
     
     | 
-    <a href='/blog/tags/原型/'>原型</a>
+    <a href='/blog/tags/性能优化/'>性能优化</a>
     
     
 </span>
@@ -251,12 +251,88 @@
                 <div class="col-md-8">
                     <p>
                       
-                        1.工厂方式javaScript中创建自己的类和对象，我们应该是必须掌握的，我们都知道javaScript中对象的属性可以在对象创建后动态定义，比如下面的代码12345678910111213141516171819202122232425262728var oCar = new Object();oCar.color = "red";oCar.doors = 4;oCar.showColor = function() &#123;  
+                        前端性能优化是一个很需要注重的问题，前端性能直接影响着用户体验！下面是我工作中“踩在巨人的肩膀上”总结的优化方式
+1.字符串拼接第一种，直接使用+进行字符串连接1234var str = '';for (var i = 0; i &lt; 10000; i++) &#123;	str += i+"&lt;br&gt;"+"str";&#125;
+这种方式使用比较广泛，但是很多人会提倡下面这种写法第二种，使用数组缓存字符串12345var
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/JavaScript定义类的几种方式/">Read More...</a>
+                        <a href="/blog/2015/06/18/前端优化总结/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/完美的全背景图片/">完美的全背景图片</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T08:56:48.928Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/技巧/'>技巧</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        我们的目标是创建一张背景图，而且它能一直覆盖整个浏览器的窗口。我们看看它有什么特点：
+
+图片覆盖整个页面，没有白边按需要缩放图片保留图片比例（方向 比例）图片居中不产生滚动条尽可能保证浏览器的兼容性不使用Flash这样的小把戏
+
+强劲 简单 先进的CSS3方式鉴于css3中已经有了background-size 这个属性，那我们完全就可以使用css来实现了。使用html元素（不用body是因为至少html的height总是浏览器窗口的高
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/完美的全背景图片/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/CSS-Hack代码与浏览兼容总结/">CSS Hack代码与浏览兼容总结</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T08:54:27.201Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/browser/'>browser</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        IE条件注释法，微软官方推荐的hack方式。123456789101112131415161718192021222324&lt;!-- 只在IE下生效 --&gt;&lt;!--[if IE]&gt;这段文字只在IE浏览器上显示&lt;!--[endif]--&gt;&lt;!-- 只在IE6下生效 --&gt;&lt;!--[if IE 6]&gt;这段文字只在IE6浏览器上显示&lt;![endif]--&gt;&lt;!-- 只
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/CSS-Hack代码与浏览兼容总结/">Read More...</a>
                     </p>
                     
                 </div>
@@ -271,7 +347,7 @@
                     <h3><a href="/blog/2015/06/18/一些常用的正则表达式/">一些常用的正则表达式</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2015-06-18T07:43:56.571Z" itemprop="datePublished">
+      <time datetime="2015-06-18T08:50:44.930Z" itemprop="datePublished">
           06/18 2015
       </time>
     
@@ -305,10 +381,84 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/remove-jQuery/">放弃jQuery改用原生JS编程</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T08:44:03.079Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        一.Ajax请求1.get请求1234567891011121314151617// jQuery$.getJSON('/my/url', function(data) &#123;&#125;);// IE9+var request = new XMLHttpRequest();request.open('GET', '/my/url', true);request.onload = function() &#123;  if (re
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/remove-jQuery/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/border1px/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T08:35:53.564Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        h1h1h2=
+
+blockquote 快注释   This is the first level of quoting.
+
+This is nested blockquote.
+
+sdf
+
+斜体  *斜体斜体*粗体粗体
+Use the printf()function.There is a literal backtick (`) here.http://example.com/&#x61;&#100;&#100;&#x72;&#x6
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/border1px/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/blog/2015/06/18/javascript在IE和Firefox中的不同语法/">javascript在IE和Firefox中的不同语法</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2015-06-18T07:29:15.730Z" itemprop="datePublished">
+      <time datetime="2015-06-18T08:34:13.082Z" itemprop="datePublished">
           06/18 2015
       </time>
     
@@ -332,6 +482,41 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/javascript在IE和Firefox中的不同语法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/JavaScript定义类的几种方式/">JavaScript定义类的几种方式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T08:20:41.145Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/原型/'>原型</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1.工厂方式javaScript中创建自己的类和对象，我们应该是必须掌握的，我们都知道javaScript中对象的属性可以在对象创建后动态定义，比如下面的代码1234567var oCar = new Object();oCar.color = "red";oCar.doors = 4;oCar.showColor = function() &#123;    alert(this.color);&#125;oCar.showColor
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/JavaScript定义类的几种方式/">Read More...</a>
                     </p>
                     
                 </div>
@@ -378,42 +563,6 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/完美的全背景图片/">完美的全背景图片</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T07:01:16.502Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/技巧/'>技巧</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        我们的目标是创建一张背景图，而且它能一直覆盖整个浏览器的窗口。我们看看它有什么特点：图片覆盖整个页面，没有白边按需要缩放图片保留图片比例（方向 比例）图片居中不产生滚动条尽可能保证浏览器的兼容性不使用Flash这样的小把戏
-强劲 简单 先进的CSS3方式鉴于css3中已经有了background-size 这个属性，那我们完全就可以使用css来实现了。使用html元素（不用body是因为至少html的height总是浏览器窗口的高度）。
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/完美的全背景图片/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/blog/2015/06/18/Javascript 小经验/">Javascript 小经验</a></h3>
                     <span>
                         <span class="post-meta">
@@ -441,147 +590,6 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/Javascript 小经验/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/js缓动效果/">js缓动效果</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T02:13:33.274Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        没有加速度的线性运动数学公式为1f(x)=x
-js实现如下
-12345AnimationTimer.makeLinear = function () &#123;   return function (percentComplete) &#123;      return percentComplete;   &#125;;&#125;;
-逐渐加速的缓入运动数学公式为1f(x)=x2
-js实现如下12345AnimationTimer.
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/js缓动效果/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/mobile safari 下overflow-auto的解决方法/">mobile safari 下overflow:auto的解决方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T01:16:38.821Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/mobile/'>mobile</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        这次有个项目需要完全支持ipad，中间还是遇到了不少的问题。今天有个div需要滚动条在ipad的safari下面失效，mobile safari因为多点触摸的缘故取消了局部区域的滚动条（为了防止和默认的拖动行为冲突）。首先排除了是不是本身布局问题造成的，为此建了一个简单的页面进行测试依然失效，google发现还真是有这样的问题，google reader上也是失效的，mobile safari为此需要使用两个手指才能完成滚动局部的行为。
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/mobile safari 下overflow-auto的解决方法/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/remove-jQuery/">放弃jQuery改用原生JS编程</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T01:06:59.440Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/js/'>js</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        一.Ajax请求1.get请求1234567891011121314151617// jQuery$.getJSON('/my/url', function(data) &#123;&#125;);// IE9+var request = new XMLHttpRequest();request.open('GET', '/my/url', true);request.onload = function() &#123;  if (re
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/remove-jQuery/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">wordpress更改域名之后无法访问的完美解决办法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T01:04:17.776Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/博客/'>博客</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最近在做项目的时候，碰到一个客户的域名有问题，解析自动失效了，然后客户自己修改了域名的解析，结果导致网站无法使用了。其实这个问题再wordpress的使用者中来说，也是老生常谈的一个问题了。
-记得很久以前，网上给出的方法是直接在数据库中修改，个人觉得这种方法对大部分人都不可靠，数据库只要一不小心就会出现很大的问题。这里我们给出最好的方法来解决。
-找到你现在所使用的主题，在主题目录中找到functions.php，在这个文件中加入以下代码
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">Read More...</a>
                     </p>
                     
                 </div>
