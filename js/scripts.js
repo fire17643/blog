@@ -81,8 +81,8 @@ $(document).ready(function($) {
 		        $(window).on('scroll', function () {
 		            var st = $(this).scrollTop();
 		            divs.css({
-		                'margin-top': -(st / 0) + "px",
-		                'opacity': 0.9 - st / 1600
+		                'margin-top': -(st / 0) + "px"/*,
+		                'opacity': st / 1600 + 0.2*/
 		            });
 		        });
 		    });

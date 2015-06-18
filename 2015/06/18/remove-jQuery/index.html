@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>放弃jQuery改用原生JS编程 | 黃志文的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="黃志文的博客">
+    <meta name="author" content="黃志文">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+ -->
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/blog/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/blog/js/html5shiv.min.js"></script>
+    <script src="/blog/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/blog/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                    
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(18)</small></a></li>
+				    
+				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-18T01:06:59.440Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                <h1>放弃jQuery改用原生JS编程</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="一-Ajax请求">一.Ajax请求</h2><h3 id="1-get请求">1.get请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.getJSON(<span class="string">'/my/url'</span>, <span class="keyword">function</span>(data) &#123;&#125;);</span><br><span class="line">// IE9+</span><br><span class="line">var request = new XMLHttpRequest();</span><br><span class="line">request.open(<span class="string">'GET'</span>, <span class="string">'/my/url'</span>, <span class="literal">true</span>);</span><br><span class="line">request.onload = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> (request.status &gt;= <span class="number">200</span> &amp;&amp; request.status &lt; <span class="number">400</span>) &#123;</span><br><span class="line">    // Success!</span><br><span class="line">    var data = JSON.parse(request.responseText);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    // We reached our target server, but it returned an error</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">request.onerror = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  // There was a connection error of some sort</span><br><span class="line">&#125;;</span><br><span class="line">request.send();</span><br></pre></td></tr></table></figure>
+<h3 id="2-POST请求">2.POST请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">'POST'</span>,</span><br><span class="line">  url: <span class="string">'/my/url'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;);</span><br><span class="line">// IE9+</span><br><span class="line">var request = new XMLHttpRequest();</span><br><span class="line">request.open(<span class="string">'POST'</span>, <span class="string">'/my/url'</span>, <span class="literal">true</span>);</span><br><span class="line">request.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urlencoded; charset=UTF-8'</span>);</span><br><span class="line">request.send(data);</span><br></pre></td></tr></table></figure>
+<h2 id="二-Class操作">二.Class操作</h2><h3 id="1-添加">1.添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).addClass(className);</span><br><span class="line">// IE8+</span><br><span class="line"><span class="keyword">if</span> (el.classList)</span><br><span class="line">  el.classList.add(className);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  el.className += <span class="string">' '</span> + className;</span><br></pre></td></tr></table></figure>
+<h3 id="2-删除">2.删除</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).removeClass(className);</span><br><span class="line">// IE8+</span><br><span class="line"><span class="keyword">if</span> (el.classList)</span><br><span class="line">  el.classList.remove(className);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  el.className = el.className.replace(new RegExp(<span class="string">'(^|\\b)'</span> + className.split(<span class="string">' '</span>).join(<span class="string">'|'</span>) + <span class="string">'(\\b|$)'</span>, <span class="string">'gi'</span>), <span class="string">' '</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="3-检查">3.检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).hasClass(className);</span><br><span class="line">// IE9+</span><br><span class="line"><span class="keyword">if</span> (el.classList)</span><br><span class="line">  el.classList.contains(className);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  new RegExp(<span class="string">'(^| )'</span> + className + <span class="string">'( |$)'</span>, <span class="string">'gi'</span>).test(el.className);</span><br></pre></td></tr></table></figure>
+<h2 id="三-DOM操作">三.DOM操作</h2><h3 id="1-插入节点before,after,append">1.插入节点before,after,append</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).after(htmlString);</span><br><span class="line">// IE8+</span><br><span class="line">el.insertAdjacentHTML(<span class="string">'afterend'</span>, htmlString);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(parent).append(el);</span><br><span class="line">// IE8+</span><br><span class="line">parent.appendChild(el);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).before(htmlString);</span><br><span class="line">// IE8+</span><br><span class="line">el.insertAdjacentHTML(<span class="string">'beforebegin'</span>, htmlString);</span><br></pre></td></tr></table></figure>
+<h3 id="2-查找、遍历、筛选、删除、替换节点">2.查找、遍历、筛选、删除、替换节点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).children();</span><br><span class="line">// IE9+</span><br><span class="line">el.children||el.childNodes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).siblings();</span><br><span class="line">// IE9+</span><br><span class="line">Array.prototype.filter.call(el.parentNode.children, <span class="keyword">function</span>(child)&#123;</span><br><span class="line">  <span class="built_in">return</span> child !== el;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.contains(el, child);</span><br><span class="line">// IE8+</span><br><span class="line">el !== child &amp;&amp; el.contains(child);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(selector).each(<span class="keyword">function</span>(i, el)&#123;&#125;);</span><br><span class="line">// IE9+</span><br><span class="line">var elements = document.querySelectorAll(selector);</span><br><span class="line">Array.prototype.forEach.call(elements, <span class="keyword">function</span>(el, i)&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(selector).filter(filterFn);</span><br><span class="line">// IE9+</span><br><span class="line">Array.prototype.filter.call(document.querySelectorAll(selector), filterFn);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).parent();</span><br><span class="line">// IE8+</span><br><span class="line">el.parentNode</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(parent).prepend(el);</span><br><span class="line">// IE8+</span><br><span class="line">parent.insertBefore(el, parent.firstChild);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).remove();</span><br><span class="line">// IE8+</span><br><span class="line">el.parentNode.removeChild(el)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).replaceWith(string);</span><br><span class="line">// IE8+</span><br><span class="line">el.outerHTML = string;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).next();</span><br><span class="line">$(el).prev();</span><br><span class="line">// IE9+</span><br><span class="line">el.nextElementSibling</span><br><span class="line">el.previousElementSibling</span><br></pre></td></tr></table></figure>
+<h3 id="3-复制节点">3.复制节点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).clone();</span><br><span class="line">// IE8+</span><br><span class="line">el.cloneNode(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="4-属性节点读写">4.属性节点读写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).attr(<span class="string">'tabindex'</span>);</span><br><span class="line">$(el).attr(<span class="string">'tabindex'</span>, <span class="string">""</span>);</span><br><span class="line">// IE8+</span><br><span class="line">el.getAttribute(<span class="string">'tabindex'</span>);</span><br><span class="line">el.setAttribute(<span class="string">'tabindex'</span>, <span class="string">""</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="5-CSS样式读写">5.CSS样式读写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).css(ruleName);</span><br><span class="line">// IE9+</span><br><span class="line">getComputedStyle(el)[ruleName];</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).toggleClass(className);</span><br><span class="line">// IE8+</span><br><span class="line"><span class="keyword">if</span> (el.classList) &#123;</span><br><span class="line">  el.classList.toggle(className);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  var classes = el.className.split(<span class="string">' '</span>);</span><br><span class="line">  var existingIndex = classes.indexOf(className);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (existingIndex &gt;= <span class="number">0</span>)</span><br><span class="line">    classes.splice(existingIndex, <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    classes.push(className);</span><br><span class="line"></span><br><span class="line">  el.className = classes.join(<span class="string">' '</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-获取节点值">6.获取节点值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).text();</span><br><span class="line">// IE9+</span><br><span class="line">el.textContent</span><br></pre></td></tr></table></figure>
+<h3 id="7-节点判断">7.节点判断</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).is($(otherEl));</span><br><span class="line">// IE8+</span><br><span class="line">el === otherEl</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).is(<span class="string">'.my-class'</span>);</span><br><span class="line">// IE9+</span><br><span class="line">var matches = <span class="keyword">function</span>(el, selector) &#123;</span><br><span class="line">  <span class="built_in">return</span> (el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector);</span><br><span class="line">&#125;;</span><br><span class="line">matches(el, <span class="string">'.my-class'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="8-节点坐标定位">8.节点坐标定位</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).offset();</span><br><span class="line">// IE8+</span><br><span class="line">var rect = el.<span class="function"><span class="title">getBoundingClientRect</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">  top: rect.top + document.body.scrollTop,</span><br><span class="line">  left: rect.left + document.body.scrollLeft</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).offsetParent();</span><br><span class="line"></span><br><span class="line">// IE8+</span><br><span class="line">el.offsetParent || el</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).outerHeight();</span><br><span class="line">// IE8+</span><br><span class="line">el.offsetHeight</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).position();</span><br><span class="line">// IE8+</span><br><span class="line">&#123;left: el.offsetLeft, top: el.offsetTop&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-事件监听">四.事件监听</h2><h3 id="1-绑定事件">1.绑定事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).on(eventName, eventHandler);</span><br><span class="line">// IE8+</span><br><span class="line">el.addEventListener(eventName, eventHandler,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="2-触发事件">2.触发事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).trigger(<span class="string">'my-event'</span>, &#123;some: <span class="string">'data'</span>&#125;);</span><br><span class="line">// IE9+</span><br><span class="line"><span class="keyword">if</span> (window.CustomEvent) &#123;</span><br><span class="line">  var event = new CustomEvent(<span class="string">'my-event'</span>, &#123;detail: &#123;some: <span class="string">'data'</span>&#125;&#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  var event = document.createEvent(<span class="string">'CustomEvent'</span>);</span><br><span class="line">  event.initCustomEvent(<span class="string">'my-event'</span>, <span class="literal">true</span>, <span class="literal">true</span>, &#123;some: <span class="string">'data'</span>&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">el.dispatchEvent(event);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.proxy(fn, context);</span><br><span class="line">// IE9+</span><br><span class="line">fn.bind(context);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$(el).trigger(<span class="string">'change'</span>);</span><br><span class="line">// IE9+</span><br><span class="line">// For a full list of event types: https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent</span><br><span class="line">var event = document.createEvent(<span class="string">'HTMLEvents'</span>);</span><br><span class="line">event.initEvent(<span class="string">'change'</span>, <span class="literal">true</span>, <span class="literal">false</span>);</span><br><span class="line">el.dispatchEvent(event);</span><br></pre></td></tr></table></figure>
+<h2 id="五-数组和对象操作">五.数组和对象操作</h2><h3 id="1-遍历数组">1.遍历数组</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.each(array, <span class="keyword">function</span>(i, item)&#123;&#125;);</span><br><span class="line">// IE9+</span><br><span class="line">array.forEach(<span class="keyword">function</span>(item, i)&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.map(array, <span class="keyword">function</span>(value, index)&#123;&#125;);</span><br><span class="line">// IE9+</span><br><span class="line">array.map(<span class="keyword">function</span>(value, index)&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="2-扩展对象">2.扩展对象</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.extend(<span class="literal">true</span>, &#123;&#125;, objA, objB);</span><br><span class="line">// IE8+</span><br><span class="line">var deepExtend = <span class="keyword">function</span>(out) &#123;</span><br><span class="line">  out = out || &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (var i = <span class="number">1</span>; i &lt; arguments.length; i++) &#123;</span><br><span class="line">    var obj = arguments[i];</span><br><span class="line">    <span class="keyword">if</span> (!obj)</span><br><span class="line">      <span class="built_in">continue</span>;</span><br><span class="line">    <span class="keyword">for</span> (var key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (typeof obj[key] === <span class="string">'object'</span>)</span><br><span class="line">          deepExtend(out[key], obj[key]);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          out[key] = obj[key];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> out;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">deepExtend(&#123;&#125;, objA, objB);</span><br></pre></td></tr></table></figure>
+<h3 id="3-数组判断和值检测">3.数组判断和值检测</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.inArray(item, array);</span><br><span class="line">// IE9+</span><br><span class="line">array.indexOf(item)</span><br><span class="line"></span><br><span class="line">// jQuery</span><br><span class="line">$.isArray(arr);</span><br><span class="line">// IE9+</span><br><span class="line">Array.isArray(arr)</span><br></pre></td></tr></table></figure>
+<h3 id="4-对象判断和检测">4.对象判断和检测</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.type(obj);</span><br><span class="line">// IE9+</span><br><span class="line">Object.prototype.toString.call(obj).replace(/^\[object (.+)\]$/, <span class="string">"<span class="variable">$1</span>"</span>).toLowerCase();</span><br></pre></td></tr></table></figure>
+<h2 id="六-其他">六.其他</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.now();</span><br><span class="line">// IE9+</span><br><span class="line">Date.now()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.parseHTML(htmlString);</span><br><span class="line">// IE9+</span><br><span class="line">var parseHTML = <span class="keyword">function</span>(str) &#123;</span><br><span class="line">  var tmp = document.implementation.createHTMLDocument();</span><br><span class="line">  tmp.body.innerHTML = str;</span><br><span class="line">  <span class="built_in">return</span> tmp.body.children;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">parseHTML(htmlString);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// jQuery</span><br><span class="line">$.trim(string);</span><br><span class="line">// IE9+</span><br><span class="line">string.trim();</span><br></pre></td></tr></table></figure>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/blog/2015/06/18/mobile safari 下overflow-auto的解决方法/" style="float: left;">
+        ← mobile safari 下overflow:auto的解决方法
+    </a>
+    
+    
+    <a class="pull-right" href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">
+        wordpress更改域名之后无法访问的完美解决办法 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/18/remove-jQuery/" data-title="放弃jQuery改用原生JS编程" data-url="http://fire17643.github.io/2015/06/18/remove-jQuery/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 黃志文. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/blog/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/blog/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/blog/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

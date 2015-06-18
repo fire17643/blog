@@ -99,3 +99,12 @@ pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5;
 }
+
+figure.highlight {
+  background-color: #4f4f4f;
+  text-shadow: none;
+}
+pre {
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+}

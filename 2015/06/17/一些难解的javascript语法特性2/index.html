@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一些难解的JavaScript语法特性1 | 黃志文的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="黃志文的博客">
+    <meta name="author" content="黃志文">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+ -->
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/blog/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/blog/js/html5shiv.min.js"></script>
+    <script src="/blog/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/blog/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                    
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(18)</small></a></li>
+				    
+				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-17T06:05:49.208Z" itemprop="datePublished">
+          06/17 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/issue/'>issue</a>
+    
+    
+</span>
+                <h1>一些难解的JavaScript语法特性1</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>一些难解的javascript语法特性2<br>1.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> a(x) &#123;</span><br><span class="line">    <span class="built_in">return</span> x * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">var a;</span><br><span class="line">alert(a);</span><br></pre></td></tr></table></figure></p>
+<p>2.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">a</span></span>() &#123;</span><br><span class="line">    alert(this);</span><br><span class="line">&#125;</span><br><span class="line">a.call(null)</span><br></pre></td></tr></table></figure></p>
+<p>3.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">"Why am I a "</span> + typeof + <span class="string">""</span>);</span><br></pre></td></tr></table></figure></p>
+<p>4.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(++[[]][+[]]);//<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>5.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="number">1234</span>[<span class="string">'toString'</span>][<span class="string">'length'</span>]);//<span class="number">1</span></span><br><span class="line">console.log(&#123;<span class="number">1</span>:<span class="number">2</span>&#125;.toString().length);//<span class="number">15</span></span><br><span class="line">console.log([<span class="number">1</span>].toString().length);//<span class="number">1</span></span><br><span class="line">console.log([<span class="number">1</span>,<span class="number">4</span>].toString().length);//<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>6.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(typeof arguments);</span><br><span class="line">	<span class="built_in">return</span> typeof arguments;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>不能显式创建 arguments 对象。arguments 对象只有函数开始时才可用。函数的 arguments 对象并不是一个数组，访问单个参数的方式与访问数组元素的方式相同。索引 n 实际上是 arguments 对象的 0…n 属性的其中一个参数。</p>
+<p>由上面可以知道arguments不是一个数组，只不过元素的访问方式与数组相同，它是一个使用于函数体中的对象，用来管理函数的实际参数。</p>
+<p>所以这道题目的答案是 object ；<br>7.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var x=<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">var foo = &#123;</span><br><span class="line">    x:<span class="number">20</span>,</span><br><span class="line">    bar:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var x = <span class="number">30</span>;</span><br><span class="line">    <span class="built_in">return</span> this.x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var a = foo.bar();</span><br><span class="line">var b = (foo.bar)();</span><br><span class="line">var c = (foo.bar=foo.bar)();</span><br><span class="line">var d = (foo.bar,foo.bar)();</span><br><span class="line"></span><br><span class="line">console.log(a,b,c,d);//<span class="number">20</span>,<span class="number">20</span>,<span class="number">10</span>,<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<p>(foo.bar=foo.bar) 这是一个表达式，得出的是返回的值 value，即foo.bar的函数对象，而不是引用 Reference，就像这样一个写法：</p>
+<p>var x = 10; (function() { return this.x; })();</p>
+<p>，括号里面是函数的值，this指向是window（可以通过上面的ECMA语言规范链接查看原理），所以打印出来的是 10；<br>8.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;&#125;;</span><br><span class="line">var key1 = <span class="number">2</span>;</span><br><span class="line">var key2 = &#123; toString : <span class="function"><span class="title">function</span></span>() &#123; <span class="built_in">return</span> <span class="number">2</span> &#125; &#125;;</span><br><span class="line">var key3 = &#123; x : <span class="number">1</span> &#125;;</span><br><span class="line">var key4 = &#123; y : <span class="number">2</span> &#125;;</span><br><span class="line"> </span><br><span class="line">o[key1] = <span class="number">1</span>;</span><br><span class="line">o[key2] = <span class="number">2</span>;</span><br><span class="line">o[key3] = <span class="number">3</span>;</span><br><span class="line">o[key4] = <span class="number">4</span>;</span><br><span class="line">// o : Object &#123;<span class="number">2</span>: <span class="number">2</span>, [object Object]: <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>9.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> a(x,y,z) &#123;</span><br><span class="line">    arguments[<span class="number">2</span>] = <span class="number">10</span>;</span><br><span class="line">    console.log(z);</span><br><span class="line">&#125;</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);// <span class="number">10</span></span><br><span class="line"><span class="keyword">function</span> a(x,y,z) &#123;</span><br><span class="line">    z = <span class="number">4</span>;</span><br><span class="line">    console.log(arguments[<span class="number">2</span>]);</span><br><span class="line">&#125;</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); // <span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<p>10.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">a</span></span>()&#123;</span><br><span class="line">    var x = y = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">a();</span><br><span class="line">console.log(y);// <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<p>11.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], b =a,a = [];</span><br><span class="line">        console.log(b);// [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], b =a,a.length = <span class="number">0</span>;</span><br><span class="line">        console.log(b);// []</span><br></pre></td></tr></table></figure></p>
+<p>当对a重新赋值时，a的指针发生变化，而b的指针仍然指向[1,2,3],设置length时，2者都指向同样的块<br>12.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = new RegExp(<span class="string">"123"</span>,<span class="string">"g"</span>);</span><br><span class="line">var b = <span class="string">"abc#123"</span>;</span><br><span class="line"></span><br><span class="line">console.log(a.test(b));//<span class="literal">true</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">false</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">true</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p>为什么会输出true，false，true，false？</p>
+<p>原来正则表达式中g标记有个lastIndex属性，该属性存放一个整数，它声明的是上一次匹配文本之后的第一个字符的位置。上次匹配的结果是由方法 RegExp.exec() 和RegExp.test() 找到的，它们都以 lastIndex 属性所指的位置作为下次检索的起始点。这样，就可以通过反复调用这两个方法来遍历一个字符串中的所有匹配文本。该属性是可读可写的。只要目标字符串的下一次搜索开始，就可以对它进行设置。当方法 exec() 或 test() 再也找不到可以匹配的文本时，它们会自动把 lastIndex 属性重置为 0。<br>如下面js代码输出RegExp的lastIndex，就可以很清楚的说明这个问题了：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var a = new RegExp(<span class="string">"123"</span>,<span class="string">"g"</span>);</span><br><span class="line">var b = <span class="string">"abc#123"</span>;</span><br><span class="line">console.log(a.test(b));//<span class="literal">true</span></span><br><span class="line">console.log(a.lastIndex);//<span class="number">7</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">false</span></span><br><span class="line">console.log(a.lastIndex);//<span class="number">0</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">true</span></span><br><span class="line">console.log(a.lastIndex);//<span class="number">7</span></span><br><span class="line">console.log(a.test(b));//<span class="literal">false</span></span><br><span class="line">console.log(a.lastIndex);//<span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>13.<br>parseInt(‘   12’, 10);  // 12<br>parseInt(0.0000008) === 8<br>String(0.0000008); // ‘8e-7’<br>parseInt(1/0, 19);      // 18<br>parseInt(false, 16);    // 250<br>parseInt(parseInt, 16); // 15<br>parseInt(“0x10”);       // 16<br>parseInt(“10”, 2);      // 2</p>
+<p>14.[“1”, “2”, “3”].map(parseInt)//[1, NaN, NaN]</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/blog/2015/06/17/原型对象的问题/" style="float: left;">
+        ← 原型对象问题
+    </a>
+    
+    
+    <a class="pull-right" href="/blog/2015/06/17/一些难解的JavaScript语法特性1/">
+        一些难解的JavaScript语法特性1 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/17/一些难解的javascript语法特性2/" data-title="一些难解的JavaScript语法特性1" data-url="http://fire17643.github.io/2015/06/17/一些难解的javascript语法特性2/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 黃志文. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/blog/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/blog/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/blog/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

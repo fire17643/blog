@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一些难解的JavaScript语法特性1 | 黃志文的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="黃志文的博客">
+    <meta name="author" content="黃志文">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+ -->
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/blog/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/blog/js/html5shiv.min.js"></script>
+    <script src="/blog/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/blog/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                    
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(18)</small></a></li>
+				    
+				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-17T06:02:11.205Z" itemprop="datePublished">
+          06/17 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                <h1>一些难解的JavaScript语法特性1</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>一些蛋疼的JavaScript语法特性,有解释。</p>
+<p>逐个来看</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    alert(typeof arguments);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>因为typeof能返回的值只有 object string number function undefined boolean 这6种，而且arguments是个类数组（不是真正的数组），数组、类数组的typeof都会返回object。所以答案：object。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var f = <span class="keyword">function</span> <span class="function"><span class="title">g</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="number">23</span>;</span><br><span class="line">&#125;;</span><br><span class="line">typeof g();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个呢，可以参考这里。因为这个函数表达式中的 g() 对外是不可见的  所以typeof g() 会系统出错。答案：Error</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> (x) &#123;</span><br><span class="line">    delete x;</span><br><span class="line">    <span class="built_in">return</span> x;</span><br><span class="line">&#125;)(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个也很简单，delete不能删除 变量 参数，  只能删除一个对象下面的属性。所以x的值不会变化 ，返回值：1</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">    bar: <span class="function"><span class="title">function</span></span> () &#123;<span class="built_in">return</span> this.baz;&#125;,</span><br><span class="line">    baz: <span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line">(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    <span class="built_in">return</span> typeof arguments[<span class="number">0</span>]();</span><br><span class="line">&#125;)(foo.bar);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>首先呢，foo是个json对象，foo.bar这个属性就是一个函数定义，foo.bar作为参数，arguments接受这个整体单做函数来执行。(foo.bar只能看做一个函数名)</p>
+<p>所以arguments<a href="">0</a>就相当于 (function () {return this.baz;})();此时的this是window，window没有baz这个属性，自然返回就是 “undefined”。<br>看这段代码就懂了</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">    bar: <span class="keyword">function</span> (xx) &#123;console.log(this == xx);<span class="built_in">return</span> this;&#125;,</span><br><span class="line">    baz: <span class="number">100</span></span><br><span class="line">&#125;;</span><br><span class="line">(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">    <span class="built_in">return</span>  arguments[<span class="number">0</span>](arguments);</span><br><span class="line">&#125;)(foo.bar);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>// 打印结果 true<br>所以this就是arguments,然后就明了了</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">    bar: <span class="function"><span class="title">function</span></span> () &#123;<span class="built_in">return</span> this.baz;&#125;,</span><br><span class="line">    baz: <span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line">typeof (f = foo.bar)();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个和上题一样foo.bar作为一个整体赋值给f，函数执行时this还是指向window。答案：undefined。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var x = <span class="number">1</span>; </span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;&#125;) &#123;   </span><br><span class="line">    x += typeof f;</span><br><span class="line">&#125;</span><br><span class="line">x;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>首先呢，函数声明是不能写在运算符的运算过程中，所以f是找不到的，那typeof f 就是undefined   然后字符串再连接，结果就是：”1undefined” 。</p>
+<p>虽然上面的程序写法不对，但还是会返回为true。（因为返回为fasle就那么几种情况，其余的都是true）</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x = [typeof x, typeof y][<span class="number">1</span>];</span><br><span class="line">typeof typeof x;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>只看最后一行就行了 ，typeof返回的那几个值都是字符串 ，再把他们typeof一次，那就是string了。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> (foo) &#123;</span><br><span class="line">    <span class="built_in">return</span> typeof foo.bar;</span><br><span class="line">&#125;)(&#123;</span><br><span class="line">    foo: &#123;</span><br><span class="line">        bar: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个闭包自执行里面的实参:json对象foo和形参foo其实没有任何关系，那个形参foo就是整个实参json对象。所以json对象里面第一层没有bar属性，肯定就是返回 undefined 了</p>
+<p>如果改为foo.foo.bar的话  那就能返回 “number”了。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;<span class="built_in">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">    <span class="built_in">return</span> f();</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;<span class="built_in">return</span> <span class="number">2</span>;&#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个就是预编译，后面的f会覆盖前面的f 然后就返回 2 。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line">new f() instanceof f;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个题目的关键是那个  “ return f ”。</p>
+<p>因为在构造函数中，如果return一个函数或者对象的话，那这个函数或者对象就会把这个构造函数给覆盖掉。也就是说，new f()之后变成了 f instanceof f，返回的自然是false。</p>
+<p>如果是 function f(){return 1;}  那就返回true了</p>
+<p>12.with (function(x, undefined){}) length;<br>with里面是一个函数，函数也是有长度的，而函数的长度呢就是函数形参的集合（arguments是实参的集合）。连个参数  返回2。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">myfunc</span></span>()&#123;</span><br><span class="line">    alert(<span class="string">'hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line">myfunc();//输出world</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">myfunc</span></span>()&#123;</span><br><span class="line">    alert(<span class="string">'world'</span>);//输出world</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>首先看上面的代码，最终都是输出world。原因在于，javascript的引擎不是一行一行的分析执行代码的，而是一段一段的分析执行的，定义式的函数语句会被提取出来优先执行。函数定义执行完毕后，才会按顺序执行其他语句代码。所以第一次调用myfunc()之前，第一个函数语句定义的代码已经被下面的定义给覆盖掉了。所以才会执行输出“world”的那个函数。</p>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var myName = <span class="string">'cc'</span>;</span><br><span class="line">name = <span class="string">'chenchen'</span>;</span><br><span class="line">output();</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">output</span></span>() &#123;</span><br><span class="line">     alert(myName); //undefined</span><br><span class="line">     alert(name); //chenchen</span><br><span class="line">     var myName = <span class="string">'ccking'</span>;</span><br><span class="line">     name = <span class="string">'javascript'</span>;</span><br><span class="line">     alert(myName); //ccking</span><br><span class="line">     alert(name); //javascript</span><br><span class="line">&#125;</span><br><span class="line">alert(myName); //cc</span><br><span class="line">alert(name); //javascript</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>第一个输出的myName，是在一个子作用域中（output函数）输出，js的执行引擎会在当前作用域查找变量，由于预编译时已经把myName初始化为undefined，自然输出为undefined。</p>
+<p>而name不是var定义的，相当于window对象的属性，全局使用，不会出错。</p>
+<p>再重新定义了myName 和name 所以输出了ccking 和 javascript</p>
+<p>在output函数外面，myName的作用域回到根作用域window 依然输出cc;而name属性在output函数中被更改所以输出javascript。</p>
+<p>很显然，使用var修饰的myName标识符在函数内外是两个东西外面的‘cc’不会因为output函数内的改为‘ccking’而变化，回到外面依然是cc；name没有var修饰所以就是一个东西，在函数内修改，函数外就会表现出来了。<br>15.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">alert(Function instanceof Object); // <span class="literal">true</span></span><br><span class="line">alert(Object instanceof Function); // <span class="literal">true</span></span><br><span class="line">alert(Object.forEach); // undefined</span><br><span class="line">Function.prototype.forEach = <span class="keyword">function</span>(object, block, context) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var key <span class="keyword">in</span> object) &#123;</span><br><span class="line">        <span class="keyword">if</span> (typeof this.prototype[key] == <span class="string">"undefined"</span>) &#123;</span><br><span class="line">            block.call(context, object[key], key, object);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>给 Function 设置的原型方法 forEach，“有趣”的是 Object 也能够获取。<br>16.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">Foo</span></span>() &#123;&#125;;</span><br><span class="line">var foo = new Foo();</span><br><span class="line"></span><br><span class="line">alert(foo instanceof Foo); // <span class="literal">true</span></span><br><span class="line">alert(foo instanceof Object); // <span class="literal">true</span></span><br><span class="line">alert(foo instanceof Function); // <span class="literal">false</span></span><br><span class="line">alert(Foo instanceof Function); // <span class="literal">true</span></span><br><span class="line">alert(Foo instanceof Object); // <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="http://fireboy.sinaapp.com/?attachment_id=" rel="external" target="_blank"><img src="http://fireboy-wordpress.stor.sinaapp.com/uploads/2014/09/javascript_object_layout.jpg" alt="" title="javascript_object_layout" width="611" height="760" class="alignnone size-full wp-image-160"></a><br>17.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>()&#123;</span><br><span class="line">        foo.abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'def'</span>)&#125;</span><br><span class="line">        this.abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'xyz'</span>)&#125;</span><br><span class="line">        abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'@@@@@'</span>)&#125;;</span><br><span class="line">        var abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'$$$$$$'</span>)&#125;</span><br><span class="line">&#125;</span><br><span class="line">foo.prototype.abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'456'</span>);&#125;</span><br><span class="line">foo.abc = <span class="function"><span class="title">function</span></span>()&#123;alert(<span class="string">'123'</span>);&#125;</span><br><span class="line">var f = new foo();</span><br><span class="line">f.abc();</span><br><span class="line">foo.abc();</span><br><span class="line">abc();</span><br></pre></td></tr></table></figure></p>
+<p>18.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">	   alert(<span class="number">5</span>)</span><br><span class="line">	&#125;,<span class="number">10</span>);</span><br><span class="line"><span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">   alert(<span class="number">3</span>)</span><br><span class="line">&#125;,<span class="number">10</span>);</span><br><span class="line">alert(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">   alert(<span class="number">4</span>)</span><br><span class="line">&#125;,<span class="number">10</span>);</span><br><span class="line">//<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>19.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var 弹框 = alert, 函数 = Function;</span><br><span class="line"><span class="keyword">function</span> 贤心(行为)&#123;</span><br><span class="line">	弹框(<span class="string">'此人正在'</span>+ 行为);</span><br><span class="line">&#125;;</span><br><span class="line">函数(<span class="string">'贤心("发呆")'</span>)();</span><br></pre></td></tr></table></figure></p>
+<p>20.<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(<span class="string">"a"</span> <span class="keyword">in</span> window)) &#123;</span><br><span class="line">    var a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(a)//undefined</span><br></pre></td></tr></table></figure></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/blog/2015/06/17/一些难解的javascript语法特性2/" style="float: left;">
+        ← 一些难解的JavaScript语法特性1
+    </a>
+    
+    
+    <a class="pull-right" href="/blog/2015/06/17/HTML5 Page Visibility/">
+         →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/17/一些难解的JavaScript语法特性1/" data-title="一些难解的JavaScript语法特性1" data-url="http://fire17643.github.io/2015/06/17/一些难解的JavaScript语法特性1/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 黃志文. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/blog/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/blog/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/blog/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

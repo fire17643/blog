@@ -3446,8 +3446,15 @@ footer .footer_bottom {
 /*---------------- END ------------------------*/
 @charset "utf-8";
 /* CSS Document */
-
-
+.navbar-inner {
+	background-color: rgba(240, 240, 240, 0.8);
+}
+.scrollme {
+	margin-top: -32px;
+}
+.herofade {
+	opacity: .2;
+}
 .entry .gist {
   background: #eee;
   border: 1px solid color-border;

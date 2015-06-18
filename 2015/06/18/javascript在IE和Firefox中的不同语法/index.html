@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>javascript在IE和Firefox中的不同语法 | 黃志文的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="黃志文的博客">
+    <meta name="author" content="黃志文">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+ -->
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/blog/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/blog/js/html5shiv.min.js"></script>
+    <script src="/blog/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/blog/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                    
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(18)</small></a></li>
+				    
+				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-18T07:29:15.730Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/browser/'>browser</a>
+    
+    
+</span>
+                <h1>javascript在IE和Firefox中的不同语法</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="一-元素查找问题">一.元素查找问题</h2><ol>
+<li><p>document.all[name]<br>(1)现有问题：Firefox不支持<code>document.all[name]</code><br>(2)解决方法：使用getElementsByName(name)，getElementById(id)等来替代。</p>
+</li>
+<li><p>集合类对象问题<br>(1)现有问题：IE中对许多集合类对象取用时可以用 ()，但在Firefox只能用[]。<br>   如：IE中可以使用<code>document.forms(&quot;formName&quot;)</code>来返回名字为”formName”的Form，但在Firefox却行不通。<br>(2)解决方法：使用[]，上例中可以改为<code>document.forms[&quot;formName&quot;]</code></p>
+</li>
+<li><p>HTML元素的ID在JavaScript可见<br>(1)现有问题：IE中HTML元素中的ID可以作为document的下属对象变量名直接使用。在Firefox中不能。<br>(2)解决方法：使用<code>getElementById(&quot;idName&quot;)</code>代替idName作为对象变量使用。</p>
+</li>
+<li><p>eval(idName)取得对象<br>(1)现有问题：在IE中，利用<code>val(idName)</code>可以取得ID为idName的HTML对象，在Firefox中不能。<br>(2)解决方法：用 <code>getElementById(idName)</code> 代替 <code>eval(idName)</code>。</p>
+</li>
+<li><p>变量名与某HTML对象ID相同<br>(1)现有问题：在Firefox中，因为对象ID不作为HTML对象的名称，所以可以使用与HTML对象id相同的变量名，IE中不能。<br>(2)解决方法：在声明变量时，一律加上var，以避免歧义，这样在IE中亦可正常运行。此外，最好不要取与HTML对象id相同的变量名，以减少错误。</p>
+<p>注：3、4和5都属于同一类的问题。</p>
+</li>
+<li><p>Frame<br>(1)现有问题：在IE中可以用<code>window.top.frameId</code>和<code>window.top</code>.frameName来得到该Frame所代表的Window，Firefox中只能用<code>window.top.frameName</code>。<br>(2)解决方法：将Frame的Id和Name设置成相同，使用<code>window.top.frameName</code>来访问Frame。</p>
+</li>
+</ol>
+<h2 id="二、DOM操作">二、DOM操作</h2><ol>
+<li><p>设置元素的文本内容。<br>(1)现有问题：IE使用innerText，而Firefox使用textContent来设置元素文本内容。<br>(2)解决方法：如果文本内容不包含”&lt;”和”&gt;;”等特殊字符，可以使用innerHTML。否则，可以使用：</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var child = elem.firstChild;</span><br><span class="line"><span class="keyword">if</span> <span class="params">(child != null)</span> elem.removeChild<span class="params">(child)</span>;</span><br><span class="line">   elem.appendChild<span class="params">(document.createTextNode<span class="params">(content)</span>)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parentElement，parent.children<br>(1)现有问题：IE可以使用parentElement获得父结点，parent.children得到结点的所有孩子结点。Firefox不支持。<br>(2)解决方法：使用parentNode和parent.childNodes。</p>
+</li>
+<li><p>对childNodes的解释。<br>(1)现有问题：IE和Firefox中对childNodes的解释不同，IE不会包含空白文本结点，而Firefox会包含。<br>(2)解决方法：使用childNodes过滤文本结点，如下：</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var <span class="built_in">children</span> = elem.childNodes;</span><br><span class="line">    <span class="keyword">for</span> <span class="params">(i = <span class="number">0</span>; i &lt; children.length; i++)</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> <span class="params">(children[i].nodeType != <span class="number">3</span>)</span> &#123; </span><br><span class="line">         <span class="comment">// 过滤文本结点</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对<code>document.getElementsByName</code>的解释。<br>(1)现有问题：IE中getElementsByName只会检查<code>&lt;input&gt;</code>;和<code>&lt;img&gt;</code>;元素，而在Firefox下会检查所有元素。<br>(2)解决方法：不要使用getElementsByName检查除<code>&lt;input&gt;</code>;和<code>&lt;img&gt;</code>之外的元素，如果要获得单个元素，尽量使用<code>getElementById</code>。</p>
+</li>
+<li><p>对<code>document.getElementById</code>的解释。<br>(1)现有问题：IE中getElementById不仅检查Id属性，也会检查Name属性，当Name属性匹配参数时也会返回该元素。而在Firefox中只会检查Id属性。<br>(2)解决方法：尽量保持Id和Name相同，不要让一个元素name属性和另一个元素的id属性相同。</p>
+</li>
+</ol>
+<h2 id="三、事件">三、事件</h2><ol>
+<li><p>event.x与event.y问题<br>(1)现有问题：在IE中，event对象有x,y 属性，Firefox中没有。<br>(2)解决方法：在Firefox中，与event.x 等效的是 event.pageX。可以使用：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mX = <span class="keyword">event</span>.x ? <span class="keyword">event</span>.x : <span class="keyword">event</span>.pageX;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>window.event<br>(1)现有问题：使用window.event无法在Firefox上运行<br>(2)解决方法： </p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evt = evt ? evt : (<span class="keyword">window</span>.<span class="keyword">event</span> ? <span class="keyword">window</span>.<span class="keyword">event</span> : null);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>attachEvent和addEventListener<br>(1)现有问题：IE中使用attachEvent来添加事件，Firefox中使用addEventListener。<br>(2)解决方法：如下，注意事件参数的区别，一个是click，一个是onclick。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.attachEvent) <span class="built_in">document</span>.attachEvent(<span class="string">"onclick"</span>, clickHandler);</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>,clickHandler,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>四、语法</p>
+<ol>
+<li><p>const<br>(1)现有问题：在IE中不能使用const关键字。如<code>const constVar = 32;</code>在IE中这是语法错误。<br>(2)解决方法：不使用const，以var代替。</p>
+</li>
+<li><p>多余的逗号<br>(1)现有问题：firefox中对象文字常量容许多余的逗号，在IE中不允许。下面语句在IE中非法。<br>   <code>var obj = { &#39;key&#39; : &#39;aaa&#39;, }</code><br>(2)解决方法：去掉多余逗号。</p>
+</li>
+</ol>
+<p>五、XML</p>
+<ol>
+<li>创建XMLHttpRequest<br>(1)现有问题：Firefox使用XMLHttpRequest，IE使用ActiveXObject。<br>(2)解决方法:<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</span><br><span class="line">  req = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.ActiveXObject) &#123;</span><br><span class="line">	req = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>创建DOM<br>(1)现有问题：Firefox和IE创建DOM的方式不同。<br>(2)解决方法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createXmlDom</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> oXmlDom;</span><br><span class="line">	<span class="keyword">if</span> (Window.ActiveXObject) &#123; <span class="comment">// IE</span></span><br><span class="line">	  oXmlDom = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XmlDom"</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;  <span class="comment">// Firefox</span></span><br><span class="line">	  oXmlDom = <span class="built_in">document</span>.implementation.createDocument(<span class="string">""</span>, <span class="string">""</span>, <span class="literal">null</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-加载XML">3.加载XML</h3><p>(1)现有问题：如果要加载外部文件IE和Firefox都可以用:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">oXmlDom.<span class="keyword">async</span>=<span class="keyword">false</span>;      <span class="comment">// 这在Firefox中是必须的</span></span><br><span class="line">oXmlDom.load(<span class="string">"test.xml"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>但是它们加载xml字符串的方式不一样，IE中直接可以使用<code>oXmlDom.loadXML(&quot;&lt;root&gt;;&lt;child/&gt;;&lt;/root&gt;;&quot;)</code>，而Firefox要使用<code>DOMParser</code>:</p>
+<p>  var oParser = new DOMParser();<br>  var oXmlDom = oParser.parseFromString(“<root>;”, “text/xml”);</root></p>
+<p>  (2)解决方法：比较好的方法是给Firefox产生的XMLDom加上loadXML方法：<br>    if (isFirefox) { // 需要浏览器检测<br>        Document.prototype.loadXML = function(sXml) {<br>          var oParser = new DOMParser();<br>          var oXmlDom = oParser.parseFromString(sXml, “text/xml”);<br>          while (this.firstChild) this.removeChild(this.firstChild);<br>          for (var i = 0; i &lt; oXmlDom.childNodes.length; i++) {<br>              var oNewNode = this.importNode(oXmlDom.childNodes[i], true);<br>              this.appendChild(oNewNode);<br>          }<br>        }<br>    }<br>    这样在IE和Firefox就可以调用loadXML方法了。 </p>
+<h3 id="4-XPath支持">4.XPath支持</h3><p>  (1)现有问题：IE中可以直接用XmlDOM的selectNodes来根据XPath表示式来选择结点，Firefox则比较复杂，需要使用XPathEvaluator。<br>  <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">  <span class="regexp">//</span><span class="attribute">IE</span>: </span><br><span class="line">  <span class="reserved">var</span> lstNodes = oXmlDom.documentElement.selectNodes(<span class="string">"employee/name"</span>);</span><br><span class="line">  <span class="keyword">for</span> (<span class="reserved">var</span> i = <span class="number">0</span>; i &lt; lstNodes.length; i++) &#123;</span><br><span class="line">  	alert(lstNodes[i].firstChild.nodeValue);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="regexp">//</span><span class="attribute">Firefox</span>: </span><br><span class="line">  <span class="reserved">var</span> oEvaluator = <span class="keyword">new</span> XPathEvaluator();</span><br><span class="line">  <span class="reserved">var</span> oResult = oEvaluator.evaluate(<span class="string">"employee/name"</span>, oXmlDom.documentElement, <span class="literal">null</span>, XPathResult.ORDERED_NODE_ITERATOR_TYPE, <span class="literal">null</span>);</span><br><span class="line">  <span class="reserved">var</span> oElement = oResult.iterateNext();</span><br><span class="line">  <span class="keyword">while</span> (oElement) &#123;</span><br><span class="line">    alert(oElement.firstChild.nodeValue);</span><br><span class="line">    oElement = oResult.iterateNext();</span><br><span class="line">  &#125;</span><br><span class="line">   `<span class="javascript"></span>``<span class="javascript">  </span><br><span class="line">  (<span class="number">2</span>)解决方法：比较好的方法给Firefox的Element添加selectNodes方法。</span><br><span class="line"> </span>``<span class="javascript"></span>` </span><br><span class="line">    <span class="keyword">if</span> (isFirefox) &#123; <span class="regexp">//</span> 需要浏览器检测</span><br><span class="line">        Element.prototype.selectNodes = <span class="reserved">function</span>(sXPath) &#123;</span><br><span class="line">        <span class="reserved">var</span> oEvaluator = <span class="keyword">new</span> XPathEvaluator();</span><br><span class="line">          <span class="reserved">var</span> oResult = oEvaluator.evaluate(sXPath, <span class="keyword">this</span>, <span class="literal">null</span>, XPathResult.ORDERED_NODE_ITERATOR_TYPE,     <span class="literal">null</span>); </span><br><span class="line">          <span class="reserved">var</span> aNodes = <span class="keyword">new</span> Array();</span><br><span class="line">          <span class="keyword">if</span> (oResult != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="reserved">var</span> oElement = oResult.iterateNext();</span><br><span class="line">            <span class="keyword">while</span> (oElement) &#123;</span><br><span class="line">              aNodes.push(oElement);</span><br><span class="line">              oElement = oResult.iterateNext();</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">return</span> aNodes;</span><br><span class="line">    &#125;</span><br><span class="line"> `<span class="javascript"></span>``<span class="javascript">        </span><br><span class="line"> 这样在IE和Firefox中就都可以调用selectNodes方法了。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> XSLT支持</span><br><span class="line">  (<span class="number">1</span>)现有问题：IE中可以使用XmlDOM的transferNode方法将其转换成html，而Firefox需要使用XSLTProcessor。</span><br><span class="line"> </span>``<span class="javascript"></span>` </span><br><span class="line">  <span class="regexp">//</span><span class="attribute">IE</span>:</span><br><span class="line">  oXmlDom.load(<span class="string">"employee.xml"</span>);</span><br><span class="line">  oXslDom.load(<span class="string">"employee.xslt"</span>);</span><br><span class="line">  <span class="reserved">var</span> sResult=oXmlDom.transformNode(oXslDom);</span><br><span class="line">  <span class="regexp">//</span><span class="attribute">Firefox</span>:</span><br><span class="line">  <span class="reserved">var</span> oProcessor = <span class="keyword">new</span> XSLTProcessor();</span><br><span class="line">  oProcessor.importStylesheet(oXslDom);</span><br><span class="line">  <span class="reserved">var</span> oResultDom = oProcessor.transformToDocument(oXmlDom);        </span><br><span class="line">  <span class="reserved">var</span> oSerializer = <span class="keyword">new</span> XMLSerializer();</span><br><span class="line">  <span class="reserved">var</span> sXml = oSerializer.serializeToString(oResultDom, <span class="string">"text/xml"</span>);</span><br><span class="line">  alert(sXml);</span><br><span class="line"> `<span class="javascript"></span>``<span class="javascript">  </span><br><span class="line">  (<span class="number">2</span>)解决方法：比较好的方法给Firefox的Node添加transferNode方法。</span><br><span class="line">  </span>``<span class="javascript"></span>` </span><br><span class="line"><span class="keyword">if</span> (isFirefox) &#123; </span><br><span class="line">	<span class="regexp">//</span> 需要浏览器检测</span><br><span class="line">	Node.prototype.transformNode = <span class="reserved">function</span>(oXslDom) &#123;</span><br><span class="line">	<span class="reserved">var</span> oProcessor = <span class="keyword">new</span> XSLTProcessor();</span><br><span class="line">	  oProcessor.importStylesheet(oXslDom);</span><br><span class="line">	  <span class="reserved">var</span> oResultDom = oProcessor.transformToDocument(oXmlDom);</span><br><span class="line">	  </span><br><span class="line">	  <span class="reserved">var</span> oSerializer = <span class="keyword">new</span> XMLSerializer();</span><br><span class="line">	  <span class="reserved">var</span> sXml = oSerializer.serializeToString(oResultDom, <span class="string">"text/xml"</span>);</span><br><span class="line">	  </span><br><span class="line">	  <span class="keyword">return</span> sXml;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> `<span class="javascript"></span>``<span class="javascript">  </span><br><span class="line">   这样在IE和Firefox中就都可以调用transferNode方法了。</span><br><span class="line"></span><br><span class="line">##其他：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>窗体的高度和宽度    </span><br><span class="line"></span><br><span class="line">IE：<span class="built_in">document</span>.body.offsetWidth和<span class="built_in">document</span>.body.offsetHeight。注意：此时页面一定要有body标签。    </span><br><span class="line">FF：<span class="built_in">window</span>.innerWidth和<span class="built_in">window</span>.innerHegiht，</span><br><span class="line">以及<span class="built_in">document</span>.documentElement.clientWidth和<span class="built_in">document</span>.documentElement.clientHeight。    </span><br><span class="line">通用：<span class="built_in">document</span>.body.clientWidth和<span class="built_in">document</span>.body.clientHeight。    </span><br><span class="line">  </span><br><span class="line"><span class="number">2.</span>标签的自定义属性   </span><br><span class="line"></span><br><span class="line">IE：如果给标签div1定义了一个属性value，可以div1.value和div1[<span class="string">"value"</span>]取得该值。    </span><br><span class="line">FF：不能用div1.value和div1[<span class="string">"value"</span>]取。    </span><br><span class="line">通用：div1.getAttribute(<span class="string">"value"</span>)。    </span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>用idName字符串取得对象的问题   </span><br><span class="line">(<span class="number">1</span>)现有问题   </span><br><span class="line">     在IE中，利用 <span class="built_in">eval</span>(idName) 可以取得 id 为 idName 的 HTML 对象，在MF 中不能。   </span><br><span class="line">(<span class="number">2</span>)解决方法   </span><br><span class="line">     用 getElementById(idName) 代替 <span class="built_in">eval</span>(idName)。   </span><br><span class="line">  </span><br><span class="line"><span class="number">4.</span>变量名与某 HTML 对象 id 相同的问题   </span><br><span class="line">(<span class="number">1</span>)现有问题   </span><br><span class="line">    在 MF 中，因为对象 id 不作为 HTML 对象的名称，所以可以使用与 HTML 对象 id 相同的变量名，IE 中不能。   </span><br><span class="line">(<span class="number">2</span>)解决方法   </span><br><span class="line">    在声明变量时，一律加上 <span class="keyword">var</span> ，以避免歧义，这样在 IE 中亦可正常运行。   </span><br><span class="line">    此外，最好不要取与 HTML 对象 id 相同的变量名，以减少错误。   </span><br><span class="line">  </span><br><span class="line"><span class="number">5.</span><span class="built_in">document</span>.getElementsByName() 和 <span class="built_in">document</span>.all[name] 的问题   </span><br><span class="line">现有问题：在 IE 中，getElementsByName()、<span class="built_in">document</span>.all[name] 均不能用来取得 div 元素</span><br><span class="line">（是否还有其它不能取的元素还不知道）。   </span><br><span class="line"><span class="comment">//document.all   </span></span><br><span class="line">Firefox可以兼容<span class="built_in">document</span>.all， 但会生成一条警告。可以用getElementById(<span class="string">"*"</span>) </span><br><span class="line">或者 getElementByTagName(<span class="string">"*"</span>)来代替   </span><br><span class="line">不过对于<span class="built_in">document</span>.all.length等属性，则完全不兼容   </span><br><span class="line">  </span><br><span class="line"><span class="number">6.</span>input.type属性问题    </span><br><span class="line">说明:IE下input.type属性为只读;但是Firefox下input.type属性为读写   </span><br><span class="line">  </span><br><span class="line"><span class="number">7.</span>frame问题    </span><br><span class="line">以下面的frame为例：</span><br><span class="line"></span>`&lt;frame src=<span class="string">"xxx.html"</span> mce_src=<span class="string">"xxx.html"</span> id=<span class="string">"frameId"</span> name=<span class="string">"frameName"</span> /&gt; `<span class="javascript">  </span><br><span class="line">(<span class="number">1</span>)访问frame对象:    </span><br><span class="line">IE:使用<span class="built_in">window</span>.frameId或者<span class="built_in">window</span>.frameName来访问这个frame对象. frameId和frameName可以同名。    </span><br><span class="line">FF:只能使用<span class="built_in">window</span>.frameName来访问这个frame对象.    </span><br><span class="line">另外，在IE和Firefox中都可以使用<span class="built_in">window</span>.document.getElementById(<span class="string">"frameId"</span>)来访问这个frame对象.    </span><br><span class="line">(<span class="number">2</span>)切换frame内容:    </span><br><span class="line">在IE和Firefox中都可以使用<span class="built_in">window</span>.document.getElementById(<span class="string">"testFrame"</span>).src = <span class="string">"xxx.html"</span></span><br><span class="line">或<span class="built_in">window</span>.frameName.location = <span class="string">"xxx.html"</span>来切换frame的内容.    </span><br><span class="line">如果需要将frame中的参数传回父窗口(注意不是opener,而是parent frame)，可以在frme中使用parent来访问父窗口。</span><br><span class="line">例如：<span class="built_in">window</span>.parent.document.form1.filename.value=<span class="string">"Aqing"</span>;    </span><br><span class="line">  </span><br><span class="line"> </span><br><span class="line"><span class="number">8.</span>事件委托方法    </span><br><span class="line">IE：<span class="built_in">document</span>.body.onload = inject; <span class="comment">//Function inject()在这之前已被实现    </span></span><br><span class="line">FF：<span class="built_in">document</span>.body.onload = inject();    </span><br><span class="line">  </span><br><span class="line"><span class="number">9.</span>innerText在IE中能正常工作，但是innerText在FireFox中却不行. 需用textContent   </span><br><span class="line">  </span><br><span class="line"><span class="number">10.</span>父节点、子节点和删除节点    </span><br><span class="line">IE：parentElement、parement.children，element.romoveNode(<span class="literal">true</span>)。    </span><br><span class="line">FF：parentNode、parentNode.childNodes，node.parentNode.removeChild(node)。    </span><br><span class="line">  </span><br><span class="line"><span class="number">11.</span>对select的options集合操作    </span><br><span class="line">枚举元素除了[]外，SelectName.options.item()也是可以的, 另外SelectName.options.length, </span><br><span class="line">SelectName.options.add/remove都可以在两种浏览器上使用。   </span><br><span class="line">注意在add后赋值元素，否则会失败   </span><br><span class="line">动态删除select中的所有options：    </span><br><span class="line">       <span class="built_in">document</span>.getElementById(<span class="string">"ddlResourceType"</span>).options.length=<span class="number">0</span>;    </span><br><span class="line">动态删除select中的某一项option：    </span><br><span class="line">       <span class="built_in">document</span>.getElementById(<span class="string">"ddlResourceType"</span>).options.remove(indx);     </span><br><span class="line">动态添加select中的项option:    </span><br><span class="line">       <span class="built_in">document</span>.getElementById(<span class="string">"ddlResourceType"</span>).options.add(<span class="keyword">new</span> Option(text,value));    </span><br><span class="line">IE FF 动态删除通用方法：   </span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"ddlResourceType"</span>).options[indx] = <span class="literal">null</span>;   </span><br><span class="line">  </span><br><span class="line"><span class="number">12.</span>捕获事件    </span><br><span class="line">问题：    </span><br><span class="line">FF没有setCapture()、releaseCapture()方法    </span><br><span class="line">解决方法：</span></span><br></pre></td></tr></table></figure></p>
+<p>// IE:<br>obj.setCapture();<br>obj.releaseCapture();<br>// FF:<br>window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);<br>window.releaseEvents(Event.MOUSEMOVE|Event.MOUSEUP);    </p>
+<p>if (!window.captureEvents) {<br>    o.setCapture();<br>}else {<br>    window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);<br>}<br>if (!window.captureEvents) {<br>    o.releaseCapture();<br>}else {<br>    window.releaseEvents(Event.MOUSEMOVE|Event.MOUSEUP);<br>}<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">13.禁止选取网页内容    </span><br><span class="line">问题：    </span><br><span class="line"><span class="tag">FF</span>需要用<span class="tag">CSS</span>禁止，<span class="tag">IE</span>用<span class="tag">JS</span>禁止    </span><br><span class="line">解决方法：    </span><br><span class="line"><span class="rule"><span class="attribute">IE</span>:<span class="value"> obj.onselectstart = <span class="function">function</span>() &#123;return false</span></span>;&#125;    </span><br><span class="line"><span class="rule"><span class="attribute">FF</span>:<span class="value"> -moz-user-select:none</span></span>;       </span><br><span class="line">1４. <span class="tag">CSS</span> "<span class="tag">float</span>" 值</span><br></pre></td></tr></table></figure></p>
+<p>document.getElementById(“header”).style.styleFloat = “left”; //IE<br>document.getElementById(“header”).style.cssFloat = “left”; //Firefox<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">１５. 元素的推算样式</span><br></pre></td></tr></table></figure></p>
+<p>var myObject = document.getElementById(“header”);<br>var myStyle = myObject.currentStyle.backgroundColor; //IE</p>
+<p>var myObject = document.getElementById(“header”);<br>var myComputedStyle = document.defaultView.getComputedStyle(myObject, null);<br>var myStyle = myComputedStyle.backgroundColor;  //Firefox<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">１６. 访问元素的<span class="string">"class"</span></span><br></pre></td></tr></table></figure></p>
+<p>var myObject = document.getElementById(“header”);<br>var myAttribute = myObject.getAttribute(“className”); //IE</p>
+<p>var myObject = document.getElementById(“header”);<br>var myAttribute = myObject.getAttribute(“class”); //Firefox<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">１７. 访问<span class="escape">`&lt;</span>label&gt;<span class="escape">`标</span>签中的<span class="string">"for"</span></span><br></pre></td></tr></table></figure></p>
+<p>var myObject = document.getElementById(“myLabel”);<br>var myAttribute = myObject.getAttribute(“htmlFor”); //IE</p>
+<p>var = document.getElementById(“myLabel”);<br>var myAttribute = myObject.getAttribute(“for”); //Firefox<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">１８. 获取鼠标指针的位置</span><br></pre></td></tr></table></figure></p>
+<p>var myCursorPosition = [0, 0];<br>myCursorPosition[0] = event.clientX;<br>myCursorPosition[1] = event.clientY; //IE</p>
+<p>var myCursorPosition = [0, 0];<br>myCursorPosition[0] = event.pageX;<br>myCursorPosition[1] = event.pageY; //Firefox<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">１９. 获取可见区域、窗口的大小</span><br></pre></td></tr></table></figure></p>
+<p>var myBrowserSize = [0, 0];<br>myBrowserSize[0] = document.documentElement.clientWidth;<br>myBrowserSize[1] = document.documentElement.clientHeight; //IE</p>
+<p>var myBrowserSize = [0, 0];<br>myBrowserSize[0] = window.innerWidth;<br>myBrowserSize[1] = window.innerHeight;//Firefox<br>```</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/blog/2015/06/18/一些常用的正则表达式/" style="float: left;">
+        ← 一些常用的正则表达式
+    </a>
+    
+    
+    <a class="pull-right" href="/blog/2015/06/18/Javascript中的浮点数相乘/">
+        javascript浮点数相乘 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/18/javascript在IE和Firefox中的不同语法/" data-title="javascript在IE和Firefox中的不同语法" data-url="http://fire17643.github.io/2015/06/18/javascript在IE和Firefox中的不同语法/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 黃志文. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/blog/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/blog/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/blog/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
