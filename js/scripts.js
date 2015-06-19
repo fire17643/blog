@@ -1,13 +1,14 @@
 $(document).ready(function($) {
     "use strict";
-
+    var lightnav = $(".lightnav .navbar-inner"),
+    	darknav = $(".darknav .navbar-inner");
     $(window).scroll(function () {
         if ($(document).scrollTop() > 10) {
-            $(".lightnav .navbar-inner").addClass("lightnav-alt");
-            $(".darknav .navbar-inner").addClass("darknav-alt");
+            lightnav.addClass("lightnav-alt");
+            darknav.addClass("darknav-alt");
         } else {
-            $(".lightnav .navbar-inner").removeClass("lightnav-alt");
-            $(".darknav .navbar-inner").removeClass("darknav-alt");
+            lightnav.removeClass("lightnav-alt");
+            darknav.removeClass("darknav-alt");
         }
     });
 
@@ -22,7 +23,7 @@ $(document).ready(function($) {
 				html:true
 			}
 		);
-
+		
 		$("html").niceScroll({
 			smoothscroll: true, // scroll with ease movement
 			autohidemode: false,
@@ -74,16 +75,17 @@ $(document).ready(function($) {
         new WOW().init();
 
 		// Functionailty constraints for mobile
-		if (!Modernizr.touch) {
+		/*if (!Modernizr.touch) {
 		    jQuery(function ($) {
 		        // Hero & page-header fade-in effect
 		        var divs = $('.herofade');
 		        $(window).on('scroll', function () {
 		            var st = $(this).scrollTop();
 		            divs.css({
-		                'margin-top': -(st / 0) + "px"/*,
-		                'opacity': st / 1600 + 0.2*/
+		                'margin-top': -(st / 0) + "px",
+		                'opacity': st / 1600 + 0.2
 		            });
+		        	
 		        });
 		    });
 
@@ -111,7 +113,7 @@ $(document).ready(function($) {
 		        });
 		    });
 		}
-
+*/
 		// autohide navbar on scroll
 		$("div.navbar-fixed-top").autoHidingNavbar({
 			animationDuration: 400,

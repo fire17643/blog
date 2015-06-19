@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: 博客 | 黃志文的博客</title>
+  <title>关于我 | 黃志文的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -78,7 +66,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -225,38 +213,86 @@
         <!-- // End height spacing helper -->
 
         <!-- ============================ END Hero Image =========================== -->
-      
-
-
-<section id="services">
+      <section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">wordpress更改域名之后无法访问的完美解决办法</a></h4>
-                            
-                            <p><time datetime="2015-06-18T01:04:17.776Z"><a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">06/18 2015</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h3>关于我</h3>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 clearfix col-md-offset-2">
+            <h2 id="爱好：">爱好：</h2><p>我平常喜欢玩玩三国杀，192级了，哈哈<br>喜欢贾诩的一句台词：</p>
+<blockquote>
+<p>努力活下去吧，在这乱世之中，只有靠自己，才是强者！</p>
+</blockquote>
+<h2 id="前端：">前端：</h2><p>喜欢简洁大气的网页，就如喜欢素颜美女似的</p>
+<p>就这样吧~~~</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
         </div>
     </div>
 </section>
+<section id="process">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="timeline-centered">
+                    <div class="line"></div>
+                    <div class="present">Past</div>
+                    <div class="dot_tp"></div>
+                    <div class="born">Now</div>
+                    <div class="dot_bt"></div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">1</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2013/06/12-Start</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">2</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2015/11/29-XXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">3</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2015/02/18-DDD</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">4</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>More</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <!-- timeline-centered -->
+            </div>
+        </div>
+    </div>
+</section>
+
       
 <!-- ============================ Footer =========================== -->
 
@@ -268,25 +304,21 @@
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>

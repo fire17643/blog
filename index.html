@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -233,11 +221,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/前端优化总结/">前端性能优化</a></h3>
+                    <h3><a href="/blog/2015/06/19/前端优化总结/">前端性能优化</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2015-06-18T09:04:11.646Z" itemprop="datePublished">
-          06/18 2015
+      <time datetime="2015-06-19T07:37:00.478Z" itemprop="datePublished">
+          06/19 2015
       </time>
     
     
@@ -249,16 +237,170 @@
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
-                        前端性能优化是一个很需要注重的问题，前端性能直接影响着用户体验！下面是我工作中“踩在巨人的肩膀上”总结的优化方式
+                        目录：[TOC]
+
+前端性能优化是一个很需要注重的问题，前端性能直接影响着用户体验！下面是我工作中“踩在巨人的肩膀上”总结的优化方式
+
 1.字符串拼接第一种，直接使用+进行字符串连接1234var str = '';for (var i = 0; i &lt; 10000; i++) &#123;	str += i+"&lt;br&gt;"+"str";&#125;
-这种方式使用比较广泛，但是很多人会提倡下面这种写法第二种，使用数组缓存字符串12345var
+这种方式使用比较广泛，但是很多人会提倡下面这种写法第二种，使用数组缓存
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/前端优化总结/">Read More...</a>
+                        <a href="/blog/2015/06/19/前端优化总结/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/19/markdown语法总结/">markdown语法总结</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-19T07:35:35.700Z" itemprop="datePublished">
+          06/19 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/markdown/'>markdown</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        h1h1h2=
+
+blockquote 快注释   This is the first level of quoting.
+
+This is nested blockquote.
+
+sdf
+
+斜体  *斜体斜体*粗体粗体
+Use the printf()function.There is a literal backtick (`) here.http://example.com/&#97;&#x64;&#x64;&#114;&#101
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/19/markdown语法总结/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/19/一些常用的正则表达式/">一些常用的正则表达式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-19T07:33:38.844Z" itemprop="datePublished">
+          06/19 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>,
+    
+    <a href='/blog/tags/正则/'>正则</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        123456789101112131415161718192021222324252627282930313233"^\d+$"　　//非负整数（正整数 + 0） "^[0-9]*[1-9][0-9]*$"　　//正整数 "^((-\d+)|(0+))$"　　//非正整数（负整数 + 0） "^-[0-9]*[1-9][0-9]*$"　　//负整数 "^-?\d+$"　　　　//整数 "^\d+(\.\d+)?$"　　//非负浮点数（正
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/19/一些常用的正则表达式/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/19/高亮显示搜索到的关键字/">高亮显示搜索到的关键字</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-19T07:22:00.556Z" itemprop="datePublished">
+          06/19 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/代码研究/'>代码研究</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        1234567891011121314151617181920212223242526272829//高亮显示搜索到的关键字function HeightLight(Keyword)&#123;  //文本选择器  var TextRange;  //是否找到  var Found=false;  //找到的次数  var Count = 0;  TextRange = document.body.createTextRange(); 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/19/高亮显示搜索到的关键字/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/19/mobile-safari下overflow-auto的解决方法/">mobile safari 下overflow:auto的解决方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-19T06:58:33.488Z" itemprop="datePublished">
+          06/19 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/mobile/'>mobile</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        这次有个项目需要完全支持ipad，中间还是遇到了不少的问题。今天有个div需要滚动条在ipad的safari下面失效，mobile safari因为多点触摸的缘故取消了局部区域的滚动条（为了防止和默认的拖动行为冲突）。首先排除了是不是本身布局问题造成的，为此建了一个简单的页面进行测试依然失效，google发现还真是有这样的问题，google reader上也是失效的，mobile safari为此需要使用两个手指才能完成滚动局部的行为。
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/19/mobile-safari下overflow-auto的解决方法/">Read More...</a>
                     </p>
                     
                 </div>
@@ -286,7 +428,7 @@
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         我们的目标是创建一张背景图，而且它能一直覆盖整个浏览器的窗口。我们看看它有什么特点：
 
@@ -325,7 +467,7 @@
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         IE条件注释法，微软官方推荐的hack方式。123456789101112131415161718192021222324&lt;!-- 只在IE下生效 --&gt;&lt;!--[if IE]&gt;这段文字只在IE浏览器上显示&lt;!--[endif]--&gt;&lt;!-- 只在IE6下生效 --&gt;&lt;!--[if IE 6]&gt;这段文字只在IE6浏览器上显示&lt;![endif]--&gt;&lt;!-- 只
                       
@@ -333,43 +475,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/CSS-Hack代码与浏览兼容总结/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/一些常用的正则表达式/">一些常用的正则表达式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T08:50:44.930Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/js/'>js</a>,
-    
-    <a href='/blog/tags/正则/'>正则</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        123456789101112131415161718192021222324252627282930313233"^\d+$"　　//非负整数（正整数 + 0） "^[0-9]*[1-9][0-9]*$"　　//正整数 "^((-\d+)|(0+))$"　　//非正整数（负整数 + 0） "^-[0-9]*[1-9][0-9]*$"　　//负整数 "^-?\d+$"　　　　//整数 "^\d+(\.\d+)?$"　　//非负浮点数（正
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/一些常用的正则表达式/">Read More...</a>
                     </p>
                     
                 </div>
@@ -397,7 +502,7 @@
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         一.Ajax请求1.get请求1234567891011121314151617// jQuery$.getJSON('/my/url', function(data) &#123;&#125;);// IE9+var request = new XMLHttpRequest();request.open('GET', '/my/url', true);request.onload = function() &#123;  if (re
                       
@@ -405,45 +510,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/remove-jQuery/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/border1px/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T08:35:53.564Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        h1h1h2=
-
-blockquote 快注释   This is the first level of quoting.
-
-This is nested blockquote.
-
-sdf
-
-斜体  *斜体斜体*粗体粗体
-Use the printf()function.There is a literal backtick (`) here.http://example.com/&#x61;&#100;&#100;&#x72;&#x6
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/border1px/">Read More...</a>
                     </p>
                     
                 </div>
@@ -471,7 +537,7 @@ Use the printf()function.There is a literal backtick (`) here.http://example.com
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         一.元素查找问题
 document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决方法：使用getElementsByName(name)，getElementById(id)等来替代。
@@ -509,7 +575,7 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         1.工厂方式javaScript中创建自己的类和对象，我们应该是必须掌握的，我们都知道javaScript中对象的属性可以在对象创建后动态定义，比如下面的代码1234567var oCar = new Object();oCar.color = "red";oCar.doors = 4;oCar.showColor = function() &#123;    alert(this.color);&#125;oCar.showColor
                       
@@ -517,79 +583,6 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/JavaScript定义类的几种方式/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/Javascript中的浮点数相乘/">javascript浮点数相乘</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T07:11:30.751Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/js/'>js</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1234567891011121314function FxF(f1, f2) &#123;    f1 += '';    f2 += '';    var f1Len = f1.split('.')[1].length,        f2Len = f2.split('.')[1].length;    if (f1Len) &#123;        f1 = f1.replace('.', '');    &#125;    
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/Javascript中的浮点数相乘/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/Javascript 小经验/">Javascript 小经验</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T05:58:12.829Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/js/'>js</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
-在创建img时，src不要设置为空或者#，否则会对页面再次发生请求，建议设置为about:blank;
-
-逻辑运算符&amp;&amp;和||的”短路”原理，如&amp;&amp;中第一个表达式为假就不会去处理第二个表达式，而||正好相反。在js中有意思的是它们的返回值：例：var attr = true &amp;&amp; 4 &amp;&amp; “aaa”;那么运行的结果attr就不是简单的true或这false，而是”aaa
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/Javascript 小经验/">Read More...</a>
                     </p>
                     
                 </div>
@@ -624,25 +617,21 @@ document.all[name](1)现有问题：Firefox不支持document.all[name](2)解决�
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>

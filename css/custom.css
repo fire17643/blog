@@ -3,9 +3,19 @@
 .navbar-inner {
 	background-color: rgba(240, 240, 240, 0.8);
 }
-.scrollme {
-	margin-top: -32px;
-}
 .herofade {
 	opacity: .2;
+}
+#intro h3>a[href*="/blog/"] {
+	text-shadow: 1px 0px 1px #A1A1A1;
+	color: #189BEC;
+	font-size: 1.2em;
+}
+#intro a[href*="/blog/tags"] {
+	color: #fff;
+	background: #B8B8B8;
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 4px;
+	margin: 0 5px 5px 0;
 }

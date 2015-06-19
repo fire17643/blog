@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>黃志文的博客</title>
+  <title>markdown语法总结 | 黃志文的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -219,50 +219,87 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2015-06-17T05:59:57.811Z" itemprop="datePublished">
-          06/17 2015
+      <time datetime="2015-06-19T07:35:35.700Z" itemprop="datePublished">
+          06/19 2015
       </time>
     
+    
+    | 
+    <a href='/blog/tags/markdown/'>markdown</a>
+    
+    
 </span>
-                <h1></h1>
+                <h1>markdown语法总结</h1>
             </div>
         </div>
         <div class="col-md-8 clearfix col-md-offset-2">
-      		<p>JavaScript操作Excel</p>
-<p><pre><code class="language-markup"><br>&lt;!DOCTYPE html&gt;<br>&lt;html lang=”en”&gt;<br>&lt;head&gt;<br>    &lt;meta charset=”UTF-8”&gt;<br>    &lt;title&gt;Document&lt;/title&gt;<br></code><br><code class="language-javascript"><br>&lt;script type=”text/javascript”&gt;<br>function MakeExcel(){<br>var i,j;<br>    try {<br>      var xls    = new ActiveXObject ( “Excel.Application” );<br>     }<br>    catch(e) {<br>         alert( “要打印该表，您必须安装Excel电子表格软件，同时浏览器须使用“ActiveX 控件”，您的浏览器须允许执行控件。 请点击【帮助】了解浏览器设置方法！”);<br>              return “”;<br>     }<br>            xls.visible =true;  //设置excel为可见<br>    var xlBook = xls.Workbooks.Add;<br>    var xlsheet = xlBook.Worksheets(1);<br>    //合并<br>      xlsheet.Range(xlsheet.Cells(1,1),xlsheet.Cells(1,7)).mergecells=true;<br>      xlsheet.Range(xlsheet.Cells(1,1),xlsheet.Cells(1,7)).value=”发卡记录”;<br>     //  xlsheet.Range(xlsheet.Cells(1,1),xlsheet.Cells(1,6)).Interior.ColorIndex=5;//设置底色为蓝色<br> //   xlsheet.Range(xlsheet.Cells(1,1),xlsheet.Cells(1,6)).Font.ColorIndex=4;//设置字体色<br> // xlsheet.Rows(1). Interior .ColorIndex = 5 ;//设置底色为蓝色  设置背景色 Rows(1).Font.ColorIndex=4<br>    //设置行高<br>    xlsheet.Rows(1).RowHeight = 25;<br>    //设置字体 ws.Range(ws.Cells(i0+1,j0), ws.Cells(i0+1,j1)).Font.Size = 13 —&gt;<br>    xlsheet.Rows(1).Font.Size=14;<br>    //设置字体 设置选定区的字体  xlsheet.Range(xlsheet.Cells(i0,j0), ws.Cells(i0,j0)).Font.Name = “黑体” —&gt;<br>    xlsheet.Rows(1).Font.Name=”黑体”;<br>    //设置列宽 xlsheet.Columns(2)=14;—&gt;</code></pre></p>
-<pre><code>xlsheet.Columns(<span class="string">"A:D"</span>).<span class="variable">ColumnWidth =</span><span class="number">18</span>;
- &amp;lt;!--设置显示字符而不是数字--&amp;gt;
-xlsheet.Columns(<span class="number">2</span>).<span class="variable">NumberFormatLocal=</span><span class="string">"@"</span>;
-xlsheet.Columns(<span class="number">7</span>).<span class="variable">NumberFormatLocal=</span><span class="string">"@"</span>;
- //设置单元格内容自动换行 range.<span class="variable">WrapText  =</span>  <span class="constant">true</span>  ;
-</code></pre><p> //设置单元格内容水平对齐方式 range.HorizontalAlignment  =  Excel.XlHAlign.xlHAlignCenter;//设置单元格内容竖直堆砌方式<br> //range.VerticalAlignment=Excel.XlVAlign.xlVAlignCenter<br> //range.WrapText  =  true;  xlsheet.Rows(3).WrapText=true  自动换行<br>    //设置标题栏<br>     xlsheet.Cells(2,1).Value=”卡号”;<br>     xlsheet.Cells(2,2).Value=”密码”;<br>     xlsheet.Cells(2,3).Value=”计费方式”;<br>     xlsheet.Cells(2,4).Value=”有效天数”;<br>     xlsheet.Cells(2,5).Value=”金额”;<br>     xlsheet.Cells(2,6).Value=”所属服务项目”;<br>       xlsheet.Cells(2,7).Value=”发卡时间”;<br>     var oTable=document.all[‘fors:data’];<br>     var rowNum=oTable.rows.length;<br>     for(i=2;i&lt;=rowNum;i++){<br>     for (j=1;j&lt;=7;j++){<br>//html table类容写到excel<br>       xlsheet.Cells(i+1,j).Value=oTable.rows(i-1).cells(j-1).innerHTML;<br>            }<br>    }<br>    &lt;!—   xlsheet.Range(xls.Cells(i+4,2),xls.Cells(rowNum,4)).Merge; —&gt;<br>    // xlsheet.Range(xlsheet.Cells(i, 4), xlsheet.Cells(i-1, 6)).BorderAround , 4<br> // for(mn=1,mn&lt;=6;mn++) .     xlsheet.Range(xlsheet.Cells(1, mn), xlsheet.Cells(i1, j)).Columns.AutoFit;<br>      xlsheet.Columns.AutoFit;<br>                 xlsheet.Range( xlsheet.Cells(1,1),xlsheet.Cells(rowNum+1,7)).HorizontalAlignment =-4108;//居中<br>                   xlsheet.Range( xlsheet.Cells(1,1),xlsheet.Cells(1,7)).VerticalAlignment =-4108;<br>                 xlsheet.Range( xlsheet.Cells(2,1),xlsheet.Cells(rowNum+1,7)).Font.Size=10;</p>
-<pre><code>xlsheet.Range<span class="params">( xlsheet.Cells<span class="params">(<span class="number">2</span>,<span class="number">1</span>)</span>,xlsheet.Cells<span class="params">(rowNum+<span class="number">1</span>,<span class="number">7</span>)</span>)</span>.Borders<span class="params">(<span class="number">3</span>)</span>.Weight = <span class="number">2</span>; <span class="comment">//设置左边距</span>
- xlsheet.Range<span class="params">( xlsheet.Cells<span class="params">(<span class="number">2</span>,<span class="number">1</span>)</span>,xlsheet.Cells<span class="params">(rowNum+<span class="number">1</span>,<span class="number">7</span>)</span>)</span>.Borders<span class="params">(<span class="number">4</span>)</span>.Weight = <span class="number">2</span>;<span class="comment">//设置右边距</span>
-       xlsheet.Range<span class="params">( xlsheet.Cells<span class="params">(<span class="number">2</span>,<span class="number">1</span>)</span>,xlsheet.Cells<span class="params">(rowNum+<span class="number">1</span>,<span class="number">7</span>)</span>)</span>.Borders<span class="params">(<span class="number">1</span>)</span>.Weight = <span class="number">2</span>;<span class="comment">//设置顶边距</span>
- xlsheet.Range<span class="params">( xlsheet.Cells<span class="params">(<span class="number">2</span>,<span class="number">1</span>)</span>,xlsheet.Cells<span class="params">(rowNum+<span class="number">1</span>,<span class="number">7</span>)</span>)</span>.Borders<span class="params">(<span class="number">2</span>)</span>.Weight = <span class="number">2</span>;<span class="comment">//设置底边距    </span>
-  xls.UserControl = <span class="literal">true</span>;  <span class="comment">//很重要,不能省略,不然会出问题 意思是excel交由用户控制</span>
- xls=null;
- xlBook=null;
- xlsheet=null;
-</code></pre><p>}<br>&lt;/script&gt;<br><br><code class="language-markup"><br>&lt;title&gt;ziyuanweihu&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;input type=”button”  value=”生成excel文件” onclick=”MakeExcel()” /&gt;<br>&lt;table id=”fors:data” border=”1” cellpadding=”0” cellspacing=”0” width=”100%”&gt;<br>    &lt;thead&gt;<br>        &lt;tr&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText1”&gt;卡号&lt;/span&gt;&lt;/th&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText2”&gt;密码&lt;/span&gt;&lt;/th&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText3”&gt;计费方式&lt;/span&gt;&lt;/th&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText4”&gt;有效天数&lt;/span&gt;&lt;/th&gt;<br>            &lt;th scope=”col”&gt;金额&lt;/th&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText6”&gt;所属服务项目&lt;/span&gt;&lt;/th&gt;<br>            &lt;th scope=”col”&gt;&lt;span id=”fors:data:headerText7”&gt;发卡时间&lt;/span&gt;&lt;/th&gt;<br>        &lt;/tr&gt;<br>    &lt;/thead&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010010&lt;/td&gt;<br>            &lt;td&gt;543860&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010011&lt;/td&gt;<br>            &lt;td&gt;683352&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010012&lt;/td&gt;<br>            &lt;td&gt;433215&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010013&lt;/td&gt;<br>            &lt;td&gt;393899&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010014&lt;/td&gt;<br>            &lt;td&gt;031736&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010015&lt;/td&gt;<br>            &lt;td&gt;188600&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010016&lt;/td&gt;<br>            &lt;td&gt;363407&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010017&lt;/td&gt;<br>            &lt;td&gt;175315&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010018&lt;/td&gt;<br>            &lt;td&gt;354437&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td&gt;h000010019&lt;/td&gt;<br>            &lt;td&gt;234750&lt;/td&gt;<br>            &lt;td&gt;计点&lt;/td&gt;<br>            &lt;td&gt;&lt;/td&gt;<br>            &lt;td&gt;2.0&lt;/td&gt;<br>            &lt;td&gt;测试项目&lt;/td&gt;<br>            &lt;td&gt;2006-06-23 10:14:40.843&lt;/td&gt;<br>        &lt;/tr&gt;<br>&lt;/table&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br> ```</code></p>
+      		<h1 id="h1">h1</h1><h2 id="h1-1">h1</h2><p>h2<br>=</p>
+<blockquote>
+<p>blockquote 快注释<br>   This is the first level of quoting.</p>
+<blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+<p>sdf</p>
+</blockquote>
+<p><em>斜体</em>  *斜体<em><br><em>斜体</em><br><em>*粗体</em></em><br><strong>粗体</strong></p>
+<p>Use the <code>printf()</code>function.<br><code>There is a literal backtick (`) here.</code><br><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#97;&#x64;&#x64;&#114;&#101;&#115;&#115;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#97;&#x64;&#x64;&#114;&#101;&#115;&#115;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<ol>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ol>
+<ul>
+<li>item 4</li>
+<li>item 4</li>
+<li>item 4</li>
+<li><ul>
+<li>item 4</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>1</li>
+<li>2</li>
+</ul>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br>Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,<br>viverra nec, fringilla in, laoreet vitae, risus.</li>
+<li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.<br>Suspendisse id sem consectetuer libero luctus adipiscing.</li>
+</ul>
+<p>4 &lt; 5<br>&copy;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h3</span>&gt;</span>pppp<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span> ##pp <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>表格：<br>| Tables        | Are           | Cool  |<br>| ——————- |:——————-:| ——-:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |</p>
+<p><code>function fn(){
+}</code></p>
+<ul>
+<li><p>A list item with a blockquote:</p>
+<blockquote>
+<p>This is a blockquote<br> inside a list item.</p>
+</blockquote>
+</li>
+</ul>
+<p>1986. What a great season.</p>
+<pre><code>这是一个代码区块
+&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"footer"</span>&gt;
+    &amp;<span class="keyword">copy</span>; <span class="number">2004</span> Foo Corporation
+&lt;/<span class="keyword">div</span>&gt;
+</code></pre><p><a href="http://google.com/" target="_blank" rel="external">Google</a></p>
 
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/blog/2015/06/17/hello-world/" style="float: left;">
-        ← Hello World
+    <a class="pull-left" href="/blog/2015/06/19/前端优化总结/" style="float: left;">
+        ← 前端性能优化
     </a>
     
     
-    <a class="pull-right" href="/blog/2015/06/17/Javascript 操作select控件大全（新增、修改、删除、选中、清空、判断存在等）/">
-         →
+    <a class="pull-right" href="/blog/2015/06/19/一些常用的正则表达式/">
+        一些常用的正则表达式 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/06/17/JavaScript操作Excel/" data-title="" data-url="http://fire17643.github.io/2015/06/17/JavaScript操作Excel/"></div>
+<div class="ds-thread" data-thread-key="2015/06/19/markdown语法总结/" data-title="markdown语法总结" data-url="http://fire17643.github.io/2015/06/19/markdown语法总结/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"firest"};
 (function() {

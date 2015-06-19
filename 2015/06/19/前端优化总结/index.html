@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>前端性能优化 | 黃志文的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="黃志文的博客">
+    <meta name="author" content="黃志文">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/blog/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/blog/js/html5shiv.min.js"></script>
+    <script src="/blog/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/blog/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                    
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(17)</small></a></li>
+				    
+				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+
+                            <!--
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            -->
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-19T07:37:00.478Z" itemprop="datePublished">
+          06/19 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/性能优化/'>性能优化</a>
+    
+    
+</span>
+                <h1>前端性能优化</h1>
+            </div>
+        </div>
+        <div class="col-md-8 clearfix col-md-offset-2">
+      		<p>目录：<br>[TOC]</p>
+<blockquote>
+<p>前端性能优化是一个很需要注重的问题，前端性能直接影响着用户体验！下面是我工作中“踩在巨人的肩膀上”总结的优化方式</p>
+</blockquote>
+<h3 id="1-字符串拼接">1.字符串拼接</h3><p>第一种，直接使用+进行字符串连接<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">	str += i+<span class="string">"&lt;br&gt;"</span>+<span class="string">"str"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这种方式使用比较广泛，但是很多人会提倡下面这种写法<br>第二种，使用数组缓存字符串<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strBuffer = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;  </span><br><span class="line">	strBuffer[i]=i+<span class="string">"&lt;br&gt;"</span>+<span class="string">"str"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> str = strBuffer.<span class="keyword">join</span>(<span class="string">''</span>);</span><br></pre></td></tr></table></figure></p>
+<p>经测试，在 IE8+下，2种方式执行速度相当，并没有差别。<br>Firefox、Chrome及webkit内核的浏览器都对字符串拼接操作进行了优化；在 Firefox和IE下，使用Array的join方式执行速度约比直接字符串拼接快30%。而webkit内核的浏览器上使用Array的join方式执行速度约比直接字符串拼接慢10%。<br>总结，移动端浏览器推荐使用+连接字符串。</p>
+<h3 id="2-数组的遍历">2.数组的遍历</h3><p>对于数组的遍历，大家都会在for循环中对数组长度进行缓存，如下：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = 0,<span class="keyword">l</span>=<span class="keyword">list</span>.length; i &lt; <span class="keyword">l</span>; i++) &#123;</span><br><span class="line">	<span class="keyword">list</span>[i]=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面这种确实比较快，但是测试发现，较先进的浏览器中比如Chrome、opera和火狐中的表现和下面的速度相当甚至更差，不过推荐使用上面的那种<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">list</span> = <span class="keyword">new</span> <span class="keyword">Array</span>(<span class="number">1000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">list</span>.length; i++) &#123;</span><br><span class="line">	<span class="keyword">list</span>[i]=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-while和for循环">3.while和for循环</h3><p>IE中使用while更快(30%)，而其他浏览器(包括IE内核的QQ和360)使用for循环比较快(20%)<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> sum</span> = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable"><span class="keyword">var</span> i</span> = <span class="number">0</span>;i <span class="type">&lt; 1000; i++) &#123;</span><br><span class="line">	sum += arr[i];</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+ <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="keyword">sum</span> = 0, </span><br><span class="line">	<span class="keyword">l</span> = 1000;</span><br><span class="line"><span class="keyword">while</span> (<span class="keyword">l</span>--) &#123;</span><br><span class="line">	<span class="keyword">sum</span> += 1000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-_3目运算符">4. 3目运算符</h3><p>IE8+下使用3目运算符相对慢30%，其他浏览器速度相当，可自由选择<br>`num = a &gt; b ? a : b;<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">a</span> &gt; b) &#123;</span><br><span class="line">    num = <span class="literal">a</span><span class="comment">;</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    num = b<span class="comment">;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-setTimeout和setInterval">5.setTimeout和setInterval</h3><p>使用setInterval比setTimeout慢40%，在各个浏览器上表现基本相同，而移动端相差也比较明显，运行过多的话setInterval会使得页面崩溃，推荐使用setTimeout<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var timeoutTimes = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeout</span><span class="params">()</span> &#123;</span></span><br><span class="line">  timeoutTimes++;</span><br><span class="line">  <span class="keyword">if</span> <span class="params">(timeoutTimes &lt; <span class="number">100</span>)</span> &#123;</span><br><span class="line">    setTimeout<span class="params">(timeout, <span class="number">10</span>)</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">timeout<span class="params">()</span>;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var intervalTimes = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">interval</span><span class="params">()</span> &#123;</span></span><br><span class="line">  intervalTimes++;</span><br><span class="line">  <span class="keyword">if</span> <span class="params">(intervalTimes &gt;= <span class="number">100</span>)</span> &#123;</span><br><span class="line">    clearInterval<span class="params">(interv)</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var interv = setInterval<span class="params">(interval, <span class="number">10</span>)</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="6-缓存重复的使用的变量值,速度提高50%">6.缓存重复的使用的变量值,速度提高50%</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> h1</span> = element1.clientHeight + num1;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> h2</span> = element1.clientHeight + num2;</span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> eleHeight</span> = element1.clientHeight;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> h1</span> = eleHeight + num1;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> h2</span> = eleHeight + num2;</span><br></pre></td></tr></table></figure>
+<h3 id="7-使用直接量">7.使用直接量</h3><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Array<span class="function"><span class="params">(param,param,...)</span> -&gt;</span> <span class="keyword">var</span> a = []</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Object<span class="function"><span class="params">()</span> -&gt;</span> <span class="keyword">var</span> foo = &#123;&#125;</span><br><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> RegExp<span class="function"><span class="params">()</span> -&gt;</span> <span class="keyword">var</span> reg = <span class="pi">/.../</span></span><br></pre></td></tr></table></figure>
+<h3 id="8-闭包中的循环引用导致内存泄露">8.闭包中的循环引用导致内存泄露</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'dom'</span>);</span><br><span class="line">	el.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="comment">// el = null; 解决方法，质空el</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">init();</span><br></pre></td></tr></table></figure>
+<p>init 在执行的时候，当前上下文我们叫做 context 。这个时候，context引用了 el，el 引用了 function，function 引用了 context。这时候形成<br>了一个循环引用。</p>
+<p>第二种方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">elClickHandler</span>(<span class="params"></span>) </span>&#123;……&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'MyElement'</span>);</span><br><span class="line">	el.onclick = elClickHandler;</span><br><span class="line">&#125;</span><br><span class="line">init();</span><br></pre></td></tr></table></figure>
+<p>把 function 抽到新的 context 中，这样， function 的 context 就不包含对 el 的引用，从而打断循环引用<br>使用闭包几种方式<br>1).</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span><span class="params">()</span> &#123;</span></span><br><span class="line">    var <span class="built_in">count</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">next</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></span><br><span class="line">        <span class="keyword">return</span> ++<span class="built_in">count</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">count</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">next</span>(); // <span class="number">1</span></span><br><span class="line"><span class="keyword">next</span>(); // <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>2).<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ++count;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> n = next(); <span class="comment">// 1</span></span><br><span class="line">n(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>3).<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">	add:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> ++count;</span><br><span class="line">	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> n = next(); <span class="comment">// 1</span></span><br><span class="line">n.add(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="9-判断数组">9.判断数组</h3><p>到目前位置，见过网上判断数组大致有如下几种方法<br>1).使用构造器constructor<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArr</span> (<span class="params">o</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> o.constructor === <span class="built_in">Array</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2).使用比较新的方法<code>Array.isArray(o);</code><br>3).调用Object的原型中的方法<code>toString</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArr</span> (<span class="params">o</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) === <span class="string">"[object Array]"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在网上看各位大牛力推第三种方法，javascript模式也用的第3种方法.可见过测试发现，第一种方法是最快的，比第三种快了将近60倍，而第二种也比第三种快了10倍</p>
+<h3 id="10-高频执行事件/方法的防抖">10.高频执行事件/方法的防抖</h3><blockquote>
+<p>通常，开发人员会在有用户交互参与的地方添加事件，而往往这种事件会被频繁触发。<br>想象一下窗口的resize事件或者是一个元素的onmouseover事件,他们触发时，执行的非常迅速，并且触发很多次。如果你的回调过重，你可能使浏览器死掉。 这就是为什么我们要引入防抖。 </p>
+</blockquote>
+<p>防抖可以限制一个方法在一定时间内执行的次数。以下代码是防抖示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取自 UnderscoreJS 实用框架  </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">func, wait, immediate</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> timeout;  </span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">        <span class="keyword">var</span> context = <span class="keyword">this</span>, args = <span class="built_in">arguments</span>;  </span><br><span class="line">        <span class="keyword">var</span> later = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">            timeout = <span class="literal">null</span>;  </span><br><span class="line">            <span class="keyword">if</span> (!immediate) func.apply(context, args);  </span><br><span class="line">        &#125;;  </span><br><span class="line">        <span class="keyword">var</span> callNow = immediate &amp;&amp; !timeout;  </span><br><span class="line">        clearTimeout(timeout);  </span><br><span class="line">        timeout = setTimeout(later, wait);  </span><br><span class="line">        <span class="keyword">if</span> (callNow) func.apply(context, args);  </span><br><span class="line">    &#125;;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 添加resize的回调函数，但是只允许它每300毫秒执行一次  </span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>, debounce(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;  </span><br><span class="line">    <span class="comment">// 这里写resize过程  </span></span><br><span class="line">&#125;, <span class="number">300</span>));</span><br></pre></td></tr></table></figure></p>
+<p>debounce方法返回一个方法，用来包住你的回调函数，限制他的执行频率。使用这个防抖方法，就可以让你写的频繁回调的方法不会妨碍用户的浏览器</p>
+<h3 id="11-CSS动画">11.CSS动画</h3><p>很多的CSS动画是用GPU处理的，因此动画本身很流畅，当然你可以使用下面这个简单的CSS强制使你的硬件加速<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.myAnimation</span> <span class="rules">&#123;  </span><br><span class="line">    <span class="rule"><span class="attribute">animation</span>:<span class="value"> someAnimation <span class="number">1s</span></span></span>;  </span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translate3d</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>; <span class="comment">/* 强制硬件加速 */</span>  </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p><code>tansform:transform(0,0,0)</code>在不会影响其他动画的同时将通话送入硬件加速</p>
+<h3 id="12-使用事件委托">12.使用事件委托</h3><p>事件委托是在父级元素上添加一个事件监听，来替代在每一个子元素上添加事件监听。当事件被触发时，event.target会评估相应的措施是否需要被执行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 获取元素，添加事件监听  </span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'#parent-list'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;  </span><br><span class="line">    <span class="comment">// e.target 是一个被点击的元素!  </span></span><br><span class="line">    <span class="comment">// 如果它是一个列表元素  </span></span><br><span class="line">    <span class="keyword">if</span>(e.target &amp;&amp; e.target.tagName == <span class="string">'LI'</span>) &#123;  </span><br><span class="line">        <span class="comment">// 我们找到了这个元素，对他的操作可以写在这里。  </span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>当事件发生的时候，它没有轮询父节点去寻找匹配的元素或选择器，且它不支持基于选择器的查询（例如用class name，或者id来查询）。所有的JavaScript框架提供了委托选择器匹配。重点是，你避免了为每一个元素加载事件监听，而是在父元素上加一个事件监听。这样大大的增加了效率，并且减少了很多维护！</p>
+<h3 id="13-使用索引对象">13.使用索引对象</h3><p>当我们想要获取一个用户时，我们就要遍历一次数组。那么更好的方法是创建一个新的对象，对每一个唯一的值建立一个索引，在上面这个例子中，用username作为索引，这个数组对象可以写成：<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">user</span>Store = &#123;&#125;;  </span><br><span class="line">ajaxResult.users.<span class="keyword">for</span>Each(function(<span class="keyword">user</span>) &#123;  </span><br><span class="line">    <span class="keyword">user</span>Store[<span class="keyword">user</span>.username] = <span class="keyword">user</span>;  </span><br><span class="line">&#125;);  </span><br><span class="line">// 现在当你想要找一个用户对象时，我们可以直接通过索引找到这个对象</span><br><span class="line">var davidwalsh = <span class="keyword">user</span>Store.davidwalsh;  </span><br><span class="line">var techpro = <span class="keyword">user</span>Store[<span class="string">"tech-pro"</span>];</span><br></pre></td></tr></table></figure></p>
+<p>这样的代码写起来更好一些，也很简便，通过索引搜索比起遍历整个数组更加快捷</p>
+<h3 id="14-不要使用_eval">14.不要使用 eval</h3><p>eval 函数会在当前作用域中执行一段 JavaScript 代码字符串。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">eval</span>(<span class="string">'foo = 3'</span>);</span><br><span class="line">    <span class="keyword">return</span> foo;</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// 3</span></span><br><span class="line">foo; <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>// 但是 eval 只在被直接调用并且调用函数就是 eval 本身时，才在当前作用域中执行。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">var</span> bar = <span class="built_in">eval</span>;</span><br><span class="line">    bar(<span class="string">'foo = 3'</span>);</span><br><span class="line">    <span class="keyword">return</span> foo;</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// 2</span></span><br><span class="line">foo; <span class="comment">// 3</span></span><br><span class="line"><span class="comment">// 译者注：上面的代码等价于在全局作用域中调用 eval，和下面两种写法效果一样：</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 写法一：直接调用全局作用域下的 foo 变量</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">window</span>.foo = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">return</span> foo;</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// 2</span></span><br><span class="line">foo; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>绝对不要使用 eval，任何使用它的代码都会在它的工作方式，性能和安全性方面受到质疑。<br>同样，不要在setTimeout和setInterval中使用字符串形式</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> &#123;</span></span><br><span class="line">    console.<span class="built_in">log</span><span class="params">(<span class="number">1</span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span><span class="params">()</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> &#123;</span></span><br><span class="line">        console.<span class="built_in">log</span><span class="params">(<span class="number">2</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    setTimeout<span class="params">('foo<span class="params">()</span>', <span class="number">1000</span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line">bar<span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="15-命名空间（Namespaces）">15.命名空间（Namespaces）</h3><p>只有一个全局作用域导致的常见错误是命名冲突。在 JavaScript中，这可以通过 匿名包装器 轻松解决。<br>有一些其他的调用函数表达式的方法，比如下面的两种方式语法不同，但是效果一模一样。</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+<span class="function"><span class="keyword">function</span><span class="params">()</span><span class="comment">&#123;&#125;</span><span class="params">()</span>;</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span><span class="comment">&#123;&#125;</span><span class="params">()</span>);</span></span><br></pre></td></tr></table></figure>
+<p>推荐使用匿名包装器（译者注：也就是自执行的匿名函数）来创建命名空间。这样不仅可以防止命名冲突， 而且有利于程序的模块化。</p>
+<p>另外，使用全局变量被认为是不好的习惯。这样的代码倾向于产生错误和带来高的维护成本。</p>
+<h3 id="16-处理_undefined_值的改变">16.处理 undefined 值的改变</h3><p>了避免可能对 undefined 值的改变，一个常用的技巧是使用一个传递到匿名包装器的额外参数。 在调用时，这个参数不会获取任何值。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="reserved">var</span> <span class="literal">undefined</span> = <span class="number">123</span>;</span><br><span class="line">(<span class="reserved">function</span>(something, foo, <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="regexp">//</span> 局部作用域里的 <span class="literal">undefined</span> 变量重新获得了 `<span class="javascript"><span class="literal">undefined</span></span>` 值</span><br><span class="line"></span><br><span class="line">&#125;)(<span class="string">'Hello World'</span>, <span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+<p>另外一种达到相同目的方法是在函数内使用变量声明。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">undefined</span> = <span class="number">123</span>;</span><br><span class="line">(<span class="function"><span class="keyword">function</span><span class="params">(something, foo)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;)(<span class="string">'Hello World'</span>, <span class="number">42</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="17-减少作用域链查找">17.减少作用域链查找</h3><p>前文谈到了作用域链查找问题，这一点在循环中是尤其需要注意的问题。如果在循环中需要访问非本作用域下的变量时请在遍历之前用局部变量缓存该变量，并在遍历结束后再重写那个变量，这一点对全局变量尤其重要，因为全局变量处于作用域链的最顶端，访问时的查找次数是最多的。<br>低效率的写法：<br> <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="comment">//全局变量</span></span><br><span class="line"><span class="keyword">var</span> globalVar = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myCallback</span><span class="params">(info)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">100000</span>; i--;)&#123;</span><br><span class="line">		<span class="comment">//每次访问globalVar都需要查找到作用域链最顶端，本例中需要访问100000次</span></span><br><span class="line">		globalVar += i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">var</span> globalVar = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myCallback</span><span class="params">(info)</span></span>&#123;</span><br><span class="line">	<span class="comment">//局部变量缓存全局变量</span></span><br><span class="line">	<span class="keyword">var</span> localVar = globalVar;</span><br><span class="line">	<span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">100000</span>; i--;)&#123;</span><br><span class="line">		<span class="comment">//访问局部变量是最快的</span></span><br><span class="line">		localVar += i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//本例中只需要访问2次全局变量</span></span><br><span class="line">	globalVar = localVar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此外，要减少作用域链查找还应该减少闭包的使用。</p>
+
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/blog/2015/06/19/markdown语法总结/">
+        markdown语法总结 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/19/前端优化总结/" data-title="前端性能优化" data-url="http://fire17643.github.io/2015/06/19/前端优化总结/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 黃志文. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <!--
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            -->
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/blog/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/blog/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/blog/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

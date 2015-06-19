@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -239,7 +227,7 @@
                 <h1></h1>
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 clearfix col-md-offset-2">
       		<p>HTML5 Page Visibility<br>HTMl5 推出了一个很“特别”的 API Page Visibility ，之所以说它特别，是因为这个 API 关注的是一个很少人留意的功能 —— 浏览器标签( tab ) 是否被激活。这里必须解释一下，这个“激活”，指的是这个标签是否正被用户浏览，或者说是否为当前标签。</p>
 <p>那么，这个 API 究竟有些什么用途呢？通常，很多传统的页面在用户没有激活它的时候，它还会继续工作，例如，当用户正在浏览新闻门户，而他之前打开的 NBA 球赛页面会继续刷新获取最新结果，视频网站会继续占用带宽加载资源，于是，如果这类不必要的工作太多了，就会造成很多的资源浪费。因此，这货相当有用：</p>
 <p>Web 程序每隔一段时间会自动更新页面信息，确保用户获取到及时的信息，但是，当用户正在浏览其他页面时，可以控制它暂停更新。<br>视频网站在播放在线视频时会不断加载视频，直到视频加载完毕，但是，当用户正在浏览其他页面时，可以暂停加载视频资源，节省带宽。<br>网站首页上有个大幻灯自动播放，当用户浏览其他页面了，就可以暂停播放。<br>于是，通过 Page Visibility ，我们可以至少达到以下一种或几种的好处：</p>
@@ -249,7 +237,6 @@
 <p>这个 Demo 的作用是监听标签的可见性是否改变 ，并且在标签可见性发生改变时产生提示。</p>
 <p>值得注意的是，在目前，浏览器对于 Page Visibility 的支持还是通过私有属性支持，因此在检测或利用 Page Visibility 提供的属性时需要加上浏览器私有前缀，例如在 Chrome 中检测上面的 visibilityState 属性时，就需要检测 document.webkitVisibilityState 而不是 document.visibilityState 。所以，Demo 中会首先检测浏览器类型，然后才使用 Page Visibility 的 API 。主要代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">browerKernel</span></span>()&#123;</span><br><span class="line">    var result;</span><br><span class="line">    [<span class="string">'webkit'</span>, <span class="string">'moz'</span>, <span class="string">'o'</span>, <span class="string">'ms'</span>].forEach(<span class="keyword">function</span>(prefix)&#123;</span><br><span class="line">        <span class="keyword">if</span>( typeof document[ prefix + <span class="string">'Hidden'</span> ] != <span class="string">'undefined'</span> )&#123;</span><br><span class="line">            result = prefix;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">init</span></span>()&#123;</span><br><span class="line">    prefix = browerKernel();</span><br><span class="line">    var showTip = document.getElementById(<span class="string">'showTip'</span>);</span><br><span class="line">    document.addEventListener( prefix  + <span class="string">'visibilitychange'</span>, <span class="keyword">function</span> onVisibilityChange(e)&#123;</span><br><span class="line">        var tip = null;    </span><br><span class="line">        <span class="keyword">if</span>( document[ prefix + <span class="string">'VisibilityState'</span> ] == <span class="string">'hidden'</span> ) tip = <span class="string">'&lt;p&gt;离开页面&lt;/p&gt;'</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>( document[ prefix + <span class="string">'VisibilityState'</span> ]  == <span class="string">'visible'</span> ) tip = <span class="string">'&lt;p&gt;进入页面&lt;/p&gt;'</span>;</span><br><span class="line">        showTip.innerHTML = showTip.innerHTML + tip;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">window.onload = init();</span><br></pre></td></tr></table></figure></p>
 
-            <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
@@ -294,25 +281,21 @@ var duoshuoQuery = {short_name:"firest"};
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>

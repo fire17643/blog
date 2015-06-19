@@ -43,8 +43,6 @@
 	}
 }
 body {
-	background-color: #FFFFFF;
-	background-color: rgb(255,255,255);
     font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "Open Sans", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	color: #666;
 	font-style: normal;
@@ -66,7 +64,6 @@ h3,
 h4,
 h5,
 h6 {
-	margin-top: 0;
 	font-style: normal;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
 	font-weight: normal;
@@ -84,7 +81,6 @@ h3 {
 	font-weight: 400;
 	line-height: 37px;
 	font-size: 20px;
-	margin-top: 0;
 }
 h4 {
 	font-weight: 400;
@@ -99,8 +95,6 @@ h4 span,
 h6 span,
 h6 span,
 .navbar .nav > li > span {
-	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-
 	font-style: italic;
 	margin-left: 4px;
 	margin-right: 3px;
@@ -111,10 +105,14 @@ h6 span,
 h1 span {
 	top: -2px
 }
+#intro {
+	background-color: #eee;
+	box-shadow: 0 10px 40px #030303;
+}
 section {
 	background-color: #fff;
 	position: relative;
-	padding-top: 60px;
+	padding-top: 40px;
 	z-index: 4;
 }
 a,
@@ -136,12 +134,12 @@ a:link {
   fieldset { display: table-cell; }
 }
 blockquote {
-	margin: 40px 0;
+	margin: 30px 0;
+	background-color: #e3e3e3;
 }
 blockquote p {
-	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-	font-style: italic;
 	font-size: 15px;
+	margin-bottom: 1em !important;
 }
 blockquote footer {
 	background-color: transparent;
@@ -258,8 +256,6 @@ input#delivery {
 	bottom: 0;
 	right: 0;
 	background: #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-	-khtml-opacity: .9;
 	-moz-opacity: .9;
 	opacity: .9;
 }
@@ -267,8 +263,6 @@ input#delivery {
 .headerfade,
 .videofade {
 	width: 100%;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-	-khtml-opacity: .9;
 	-moz-opacity: .9;
 	opacity: .9;
 	height: 100%;
@@ -278,16 +272,55 @@ input#delivery {
 	left: 0;
 }
 .element-img {
+	background: url(../img/1.jpg) no-repeat center center fixed;
+	-webkit-animation: imgplay linear 24s infinite;
+	animation: imgplay linear 24s infinite;
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
 	height: 100%;
 	position: relative;
 	z-index: 10;
-	background-repeat: no-repeat;
+}
+@-webkit-keyframes imgplay {
+	0% {
+		background-image: url(../img/1.jpg);
+		opacity: 1;
+	}
+	20% {
+		background-image: url(../img/1.jpg);
+		opacity: 1;
+	}
+	33% {
+		background-image: url(../img/2.jpg);
+	}
+	43% {
+		background-image: url(../img/2.jpg);
+		opacity: 1;
+	}
+	63% {
+		background-image: url(../img/2.jpg);
+		opacity: 1;
+	}
+	66% {
+		background-image: url(../img/3.jpg);
+		opacity: .5;
+	}
+	76% {
+		background-image: url(../img/3.jpg);
+		opacity: 1;
+	}
+	86% {
+		background-image: url(../img/3.jpg);
+		opacity: 1;
+	}
+	90% {
+		background-image: url(../img/1.jpg);
+		opacity: .5;
+	}
+	100% {
+		background-image: url(../img/1.jpg);
+		opacity: 1;
+	}
 }
 hr.title-accent {
 	height: 4px;
@@ -351,8 +384,6 @@ a.custom-button span {
           box-shadow: none;
 }
 .btn.disabled, .btn[disabled] {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
-  -khtml-opacity: .45;
   -moz-opacity: .45;
   opacity: .45;
 }
@@ -464,7 +495,6 @@ a.custom-button span {
 .logo img {
 	display:block;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
 	-moz-opacity: 1;
 	opacity: 1;
 	-webkit-transition: all ease 0.2s;
@@ -474,8 +504,6 @@ a.custom-button span {
 }
 .logo img:hover {
 	display:block;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-	-khtml-opacity: .75;
 	-moz-opacity: .75;
 	opacity: .75;
 }
@@ -585,7 +613,6 @@ nav i.icon-basic-eye {
 	.logo img:hover {
 		top:0px;
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		-khtml-opacity: 1;
 		-moz-opacity: 1;
 		opacity: 1;
 	}
@@ -696,13 +723,11 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
 .sb-close img{
 	padding: 10px 16px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-	-khtml-opacity: .6;
 	-moz-opacity: .6;
 	opacity: .6;
 }
 .sb-close img:hover {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
 	-moz-opacity: 1;
 	opacity: 1;
 }
@@ -840,7 +865,7 @@ span.sb-caret { /* Caret Down */
 	padding: 14px;
 }
 #hero p {
-	color: #333;
+	color: #666;
 	font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	font-size: 18px;
 	display: inline-block;
@@ -998,22 +1023,13 @@ span.sb-caret { /* Caret Down */
 	margin: 10px 0 30px;
 }
 #blog article img {
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
 	-moz-opacity: 1;
 	opacity: 1;
 	-webkit-transition: all ease 0.2s;
-	-moz-transition: all ease .2s;
-	-o-transition: all ease .2s;
 	transition: all ease .2s;
 }
 #blog article img:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-	-khtml-opacity: .85;
-	-moz-opacity: .85;
 	opacity: .85;
 }
 #blog .pager {
@@ -1198,13 +1214,8 @@ span.sb-caret { /* Caret Down */
 	display: block;
 	background-color: #000;
 	background-color: rgba(000, 000, 000, .5);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 	-webkit-transition: background-color .3s ease-out;
-	-moz-transition: background-color .3s ease-out;
-	-o-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
 }
 #blog-post a.readmore:hover {
@@ -1430,13 +1441,8 @@ hr.byline-accent {
 	display: block;
 	background-color: transparent;
 	background-color: rgba(000, 000, 000, .5);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 	-webkit-transition: background-color .3s ease-out;
-	-moz-transition: background-color .3s ease-out;
-	-o-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
 }
 #featured a.meta:hover {
@@ -1470,20 +1476,12 @@ hr.byline-accent {
 		background-image: -o-linear-gradient(top left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.0) 100%);
 		background-image: linear-gradient(to bottom right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.0) 100%);
 		-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		-khtml-opacity: 1;
-		-moz-opacity: 1;
 		opacity: 1;
 	}
 	#featured .byline {
 		bottom: 30px;
 	}
 	#featured a.meta:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		-khtml-opacity: 1;
 		-moz-opacity: 1;
 		opacity: 1;
 	}
@@ -2089,8 +2087,6 @@ ul.page-nav i {
 	padding-top: 0;
 }
 #team img {
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 #team h3 a {
@@ -2530,18 +2526,10 @@ ul.page-nav i {
 	background: #666;
 	cursor:pointer;
 	-webkit-transition: all ease 0.3s;
-	-moz-transition: all ease .3s;
-	-o-transition: all ease .3s;
 	transition: all ease .3s;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 }
 #projects .filter-item-wrapper:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-	-khtml-opacity: .75;
-	-moz-opacity: .75;
 	opacity: .75;
 }
 #projects .filter-item .byline {
@@ -2666,19 +2654,11 @@ ul.filters li p:hover {
 	padding: 0;
 	margin-bottom: 0;
 	border: none;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 	-webkit-transition: opacity .2s ease-in-out;
-	-moz-transition: opacity .2s ease-in-out;
-	-o-transition: opacity .2s ease-in-out;
 	transition: opacity .2s ease-in-out;
 }
 #portfolio-item .thumbnail:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-	-khtml-opacity: .6;
-	-moz-opacity: .6;
 	opacity: .6;
 }
 #portfolio-item ul.photoblock {
@@ -2725,34 +2705,22 @@ ul.filters li p:hover {
 #portfolio-item .lb-prev {
 	background: url(../img/global/cursor-prev.png);
 	background-position: 25% 50%;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	-khtml-opacity: 0;
-	-moz-opacity: 0;
 	opacity: 0;
 	background-repeat: no-repeat;
 }
 #portfolio-item .lb-prev:hover {
 	background-position: 25% 50%;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 	background-repeat: no-repeat;
 }
 #portfolio-item .lb-next {
 	background: url(../img/global/cursor-next.png);
 	background-position: 75% 50%;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	-khtml-opacity: 0;
-	-moz-opacity: 0;
 	opacity: 0;
 	background-repeat: no-repeat;
 }
 #portfolio-item .lb-next:hover {
 	background-position: 75% 50%;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	-khtml-opacity: 1;
-	-moz-opacity: 1;
 	opacity: 1;
 	background-repeat: no-repeat;
 }
@@ -2815,8 +2783,6 @@ ul.filters li p:hover {
 	width: 100%;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid #999;
 	padding: 18px;
@@ -3067,10 +3033,11 @@ button.send{
 * Global footer, (all pages)
 ******************************************************* */
 footer {
-	padding:5% 0 0;
-	background:#151515;
+	/* padding:5% 0 0; */
+	background:#ededed;
 	z-index: 9;
 	position: relative;
+	text-align: center;
 }
 footer p.m_14 {
 	color:#767D84;
@@ -3138,7 +3105,7 @@ footer .footer-top{
 	padding-bottom: 60px;
 }
 footer .copy {
-	float: left;
+	/* float: left; */
 	margin-top: 5px;
 }
 footer .copy p {
@@ -3146,6 +3113,7 @@ footer .copy p {
 	color: #767D84;
 }
 footer .social {
+	display: none;
 	float: right;
 	margin-top: 5px;
 }

@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -244,7 +232,7 @@
                 <h1>JavaScript定义类的几种方式</h1>
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 clearfix col-md-offset-2">
       		<h2 id="1-工厂方式">1.工厂方式</h2><p>javaScript中创建自己的类和对象，我们应该是必须掌握的，我们都知道javaScript中对象的属性可以在对象创建后动态定义，比如下面的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oCar = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">oCar.color = <span class="string">"red"</span>;</span><br><span class="line">oCar.doors = <span class="number">4</span>;</span><br><span class="line">oCar.showColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;</span><br><span class="line">oCar.showColor();</span><br></pre></td></tr></table></figure></p>
 <p>我们很容易使用oCar对象，但是我们创就是想创建多个Car实例。我们可以使用一个函数来封装上面的代码来实现<br>    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oCar = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    oCar.color = <span class="string">"red"</span>;</span><br><span class="line">    oCar.doors = <span class="number">4</span>;</span><br><span class="line">    oCar.showColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.color);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> oCar;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> ocar1 = createCar();</span><br><span class="line"><span class="keyword">var</span> ocar2 = createCar();</span><br><span class="line">ocar1.color = <span class="string">"black"</span>;</span><br><span class="line">ocar1.showColor();</span><br><span class="line">ocar2.showColor();</span><br></pre></td></tr></table></figure></p>
 <p>顺便说一下，javaScript对象默认成员属性都是public 的。这种方式我们称为工厂方式，我们创造了能创建并返回特定类型的对象的工厂。这样做有点意思了，但是在面向对象中我们经常使用创建对象的方法是：Car car=new Car();使用new 关键字已经深入人心，因此我们使用上面的方法去定义总感觉别扭，并且每次调用时都去创建新的属性以及函数，功能上也不实际。下来我们看看构造函数的形式定义类。</p>
@@ -260,7 +248,6 @@
 <h2 id="6_混合工厂方式">6  混合工厂方式</h2><p>这种方式通常是在不能应用前一种方式时的变通方法。它的目的是创建假构造函数，只返回另一种对象的新实例。这段代码看来与工厂函数非常相似：<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> oTempCar = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">   oTempCar.color=<span class="string">"red"</span>;</span><br><span class="line">   oTempCar.doors=<span class="number">4</span>;</span><br><span class="line">   oTempCar.mpg=<span class="number">23</span>;</span><br><span class="line">   oTempCar.showColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       alert(<span class="keyword">this</span>.color);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> oTempCar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>与经典方式不同，这种方式使用new运算符，使它看起来像真正的构造函数：<br>var oCar = new Car();<br>由于在Car()构造函数内部调用了new运算符，所以将忽略第二个new运算符（位于构造函数之外）。在构造函数内部创建的对象被传递回变量var。这种方式在对象方法的内部管理方面与经典方式有着相同的问题。强烈建议：除非万不得已（请参阅第15章），还是避免使用这种方式。<br>总结：（采用哪种方式)<br>目前使用最广泛的是混合的构造函数/原型方式。此外，动态原型方法也很流行，在功能上与构造函数/原型方式等价。可以采用这两种方式中的任何一种。不过不要单独使用经典的构造函数或原型方式，因为这样会给代码引入问题。<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//static class (1:function)</span></span><br><span class="line">    <span class="keyword">var</span> CarCollection = <span class="keyword">new</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _carCollection = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//global,private</span></span><br><span class="line">        <span class="keyword">this</span>.Add = <span class="function"><span class="keyword">function</span>(<span class="params">objCar</span>) </span>&#123;</span><br><span class="line">            alert(<span class="string">'Add'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.Get = <span class="function"><span class="keyword">function</span>(<span class="params">carid</span>) </span>&#123;</span><br><span class="line">            alert(<span class="string">'Get'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//static class (2:json)</span></span><br><span class="line">    <span class="keyword">var</span> Car = &#123;</span><br><span class="line">        color: <span class="string">'red'</span>,</span><br><span class="line">        doors: <span class="number">4</span>,</span><br><span class="line">        showColor: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; alert(<span class="keyword">this</span>.color); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Car.showColor();</span><br></pre></td></tr></table></figure></p>
 
-            <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
@@ -305,25 +292,21 @@ var duoshuoQuery = {short_name:"firest"};
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>

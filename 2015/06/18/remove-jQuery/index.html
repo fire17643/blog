@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -244,7 +232,7 @@
                 <h1>放弃jQuery改用原生JS编程</h1>
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 clearfix col-md-offset-2">
       		<h2 id="一-Ajax请求">一.Ajax请求</h2><h3 id="1-get请求">1.get请求</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$.getJSON(<span class="string">'/my/url'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;&#125;);</span><br><span class="line"><span class="comment">// IE9+</span></span><br><span class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">request.open(<span class="string">'GET'</span>, <span class="string">'/my/url'</span>, <span class="literal">true</span>);</span><br><span class="line">request.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (request.status &gt;= <span class="number">200</span> &amp;&amp; request.status &lt; <span class="number">400</span>) &#123;</span><br><span class="line">    <span class="comment">// Success!</span></span><br><span class="line">    <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(request.responseText);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// We reached our target server, but it returned an error</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">request.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// There was a connection error of some sort</span></span><br><span class="line">&#125;;</span><br><span class="line">request.send();</span><br></pre></td></tr></table></figure>
 <h3 id="2-POST请求">2.POST请求</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  type: <span class="string">'POST'</span>,</span><br><span class="line">  url: <span class="string">'/my/url'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// IE9+</span></span><br><span class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">request.open(<span class="string">'POST'</span>, <span class="string">'/my/url'</span>, <span class="literal">true</span>);</span><br><span class="line">request.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urlencoded; charset=UTF-8'</span>);</span><br><span class="line">request.send(data);</span><br></pre></td></tr></table></figure>
 <h2 id="二-Class操作">二.Class操作</h2><h3 id="1-添加">1.添加</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$(el).addClass(className);</span><br><span class="line"><span class="comment">// IE8+</span></span><br><span class="line"><span class="keyword">if</span> (el.classList)</span><br><span class="line">  el.classList.add(className);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  el.className += <span class="string">' '</span> + className;</span><br></pre></td></tr></table></figure>
@@ -287,18 +275,17 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$.parseHTML(htmlString);</span><br><span class="line"><span class="comment">// IE9+</span></span><br><span class="line"><span class="keyword">var</span> parseHTML = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> tmp = <span class="built_in">document</span>.implementation.createHTMLDocument();</span><br><span class="line">  tmp.body.innerHTML = str;</span><br><span class="line">  <span class="keyword">return</span> tmp.body.children;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">parseHTML(htmlString);</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$.trim(string);</span><br><span class="line"><span class="comment">// IE9+</span></span><br><span class="line">string.trim();</span><br></pre></td></tr></table></figure>
 
-            <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/blog/2015/06/18/一些常用的正则表达式/" style="float: left;">
-        ← 一些常用的正则表达式
+    <a class="pull-left" href="/blog/2015/06/18/CSS-Hack代码与浏览兼容总结/" style="float: left;">
+        ← CSS Hack代码与浏览兼容总结
     </a>
     
     
-    <a class="pull-right" href="/blog/2015/06/18/border1px/">
-         →
+    <a class="pull-right" href="/blog/2015/06/18/javascript在IE和Firefox中的不同语法/">
+        javascript在IE和Firefox中的不同语法 →
     </a>
     
 </nav>
@@ -332,25 +319,21 @@ var duoshuoQuery = {short_name:"firest"};
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>

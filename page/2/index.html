@@ -43,18 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/blog/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600)
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
- -->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/blog/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -100,7 +88,7 @@
                     
                         <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
                     
-                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">UAP mobile</a></li>
+                        <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
                 </ul>
             </li>
@@ -124,7 +112,7 @@
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="http://www.baidu.com/" class="animsition-link">百度</a></li>
                     
                 </ul>
             </li>
@@ -132,7 +120,7 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
             <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
@@ -159,23 +147,23 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">黃志文的博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog/archives" title="所有文章">文章</a></li>
+                            <li><a href="/blog/tags" title="标签">标签</a></li>
+                            <li><a href="/blog/about" title="关于我">关于</a></li>
                             
                             <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+
+                            <!--
                             
                             
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
                             
                             
                             <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+                            -->
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
@@ -198,13 +186,13 @@
         <!-- ============================ Hero Image =========================== -->
 
         <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/blog/img/1.jpg) no-repeat center center fixed">
+            <div class="container-fluid element-img" style="">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
                             	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <h2>You've made a <span>brave</span> decision, welcome.</h2>
                                 <p></p>
 				    			
                                 <h2></h2>
@@ -233,6 +221,79 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/Javascript中的浮点数相乘/">javascript浮点数相乘</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T07:11:30.751Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        1234567891011121314function FxF(f1, f2) &#123;    f1 += '';    f2 += '';    var f1Len = f1.split('.')[1].length,        f2Len = f2.split('.')[1].length;    if (f1Len) &#123;        f1 = f1.replace('.', '');    &#125;    
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/Javascript中的浮点数相乘/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/18/Javascript 小经验/">Javascript 小经验</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-18T05:58:12.829Z" itemprop="datePublished">
+          06/18 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        
+在创建img时，src不要设置为空或者#，否则会对页面再次发生请求，建议设置为about:blank;
+
+逻辑运算符&amp;&amp;和||的”短路”原理，如&amp;&amp;中第一个表达式为假就不会去处理第二个表达式，而||正好相反。在js中有意思的是它们的返回值：例：var attr = true &amp;&amp; 4 &amp;&amp; “aaa”;那么运行的结果attr就不是简单的true或这false，而是”aaa
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/18/Javascript 小经验/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/blog/2015/06/18/js缓动效果/">js缓动效果</a></h3>
                     <span>
                         <span class="post-meta">
@@ -244,7 +305,7 @@
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         没有加速度的线性运动数学公式为1f(x)=x
 js实现如下
@@ -256,78 +317,6 @@ js实现如下12345AnimationTimer.
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/18/js缓动效果/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/mobile safari 下overflow-auto的解决方法/">mobile safari 下overflow:auto的解决方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T01:16:38.821Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/mobile/'>mobile</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        这次有个项目需要完全支持ipad，中间还是遇到了不少的问题。今天有个div需要滚动条在ipad的safari下面失效，mobile safari因为多点触摸的缘故取消了局部区域的滚动条（为了防止和默认的拖动行为冲突）。首先排除了是不是本身布局问题造成的，为此建了一个简单的页面进行测试依然失效，google发现还真是有这样的问题，google reader上也是失效的，mobile safari为此需要使用两个手指才能完成滚动局部的行为。
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/mobile safari 下overflow-auto的解决方法/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">wordpress更改域名之后无法访问的完美解决办法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-18T01:04:17.776Z" itemprop="datePublished">
-          06/18 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/博客/'>博客</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最近在做项目的时候，碰到一个客户的域名有问题，解析自动失效了，然后客户自己修改了域名的解析，结果导致网站无法使用了。其实这个问题再wordpress的使用者中来说，也是老生常谈的一个问题了。
-记得很久以前，网上给出的方法是直接在数据库中修改，个人觉得这种方法对大部分人都不可靠，数据库只要一不小心就会出现很大的问题。这里我们给出最好的方法来解决。
-找到你现在所使用的主题，在主题目录中找到functions.php，在这个文件中加入以下代码
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/18/wordpress更改域名之后无法访问的完美解决办法/">Read More...</a>
                     </p>
                     
                 </div>
@@ -355,7 +344,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         滕王阁序
 王勃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南昌故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云，千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家
@@ -364,41 +353,6 @@ js实现如下12345AnimationTimer.
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/17/那些高中时曾经背得烂熟的古文再一次读读吧，慢慢的读,很享受/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/blog/2015/06/17/高亮显示搜索到的关键字/">高亮显示搜索到的关键字</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2015-06-17T06:28:48.368Z" itemprop="datePublished">
-          06/17 2015
-      </time>
-    
-    
-    | 
-    <a href='/blog/tags/代码研究/'>代码研究</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        12345678910111213141516171819202122232425262728293031323334//高亮显示搜索到的关键字function HeightLight(Keyword)&#123;	//文本选择器	var TextRange;	//是否找到	var Found=false;	//找到的次数	var Count = 0;	TextRange = document.body.createTextRange(
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/blog/2015/06/17/高亮显示搜索到的关键字/">Read More...</a>
                     </p>
                     
                 </div>
@@ -426,7 +380,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         多年前我跟一位同学谈话。那时他太太刚去世不久，他告诉我说，他在整理他太太的东西的时候，发现了一条丝质的围巾，那是他们去纽约旅游时，在一家名牌店买的。那是一条雅致、漂亮的名牌围巾，高昂的价格卷标还挂在上面，他太太一直舍不得用，她想等一个特殊的日子才用。讲到这里，他停住了，我也没接话，好一会儿后他说：“再也不要把好东西留到特别的日子才用，你活着的每一天都是特别的日子。”
 以后，每当想起这几句话时，我常会把手边的杂事放下，找一本小说，打开音响
@@ -462,7 +416,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         一、使用margin实现左固定右自适应1234567891011#left &#123;  width: 250px;  height: 250px;  background: rgb(0, 214, 255);  float: left;&#125;#right &#123;  height: 200px;  background: rgb(76, 129, 207);  margin-left:110px;&#125;
 二、使用po
@@ -498,7 +452,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001011021031041051061071081091
                       
@@ -533,7 +487,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         123456789101112131415161718function Person()&#123;&#125;Person.prototype=&#123;    name:"wenbin",    age:29,    job:"software engineer",    friends:["Shelby","Court"],    sayName:function()&#123;        console.log(this.
                       
@@ -568,7 +522,7 @@ js实现如下12345AnimationTimer.
                     </span>
                 </div>
                 <div class="col-md-8">
-                    <p>
+                    <p style="margin-top: 0;">
                       
                         一些难解的javascript语法特性21. 12345function a(x) &#123;    return x * 2;&#125;var a;alert(a);
 2. 1234function a() &#123;    alert(this);&#125;a.call(null)
@@ -579,6 +533,47 @@ js实现如下12345AnimationTimer.
                     
                     <p class="pull-right readMore">
                         <a href="/blog/2015/06/17/一些难解的javascript语法特性2/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/blog/2015/06/17/一些难解的JavaScript语法特性1/">一些难解的JavaScript语法特性1</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-06-17T06:02:11.205Z" itemprop="datePublished">
+          06/17 2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p style="margin-top: 0;">
+                      
+                        一些蛋疼的JavaScript语法特性,有解释。
+逐个来看
+
+123(function()&#123;    alert(typeof arguments);&#125;)();
+
+
+因为typeof能返回的值只有 object string number function undefined boolean 这6种，而且arguments是个类数组（不是真正的数组），数组、类数组的typeof都会返回object。所以答案：objec
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/blog/2015/06/17/一些难解的JavaScript语法特性1/">Read More...</a>
                     </p>
                     
                 </div>
@@ -613,25 +608,21 @@ js实现如下12345AnimationTimer.
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
+            <!--
             <div class="social">
                 <ul>
                     
                     <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
+            -->
             <div class="clearfix"> </div>
         </div>
 </footer>
