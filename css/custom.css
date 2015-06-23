@@ -1,21 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
-.navbar-inner {
-	background-color: rgba(240, 240, 240, 0.8);
-}
 .herofade {
 	opacity: .2;
 }
-#intro h3>a[href*="/blog/"] {
-	text-shadow: 1px 0px 1px #A1A1A1;
-	color: #189BEC;
+#intro h3>a {
+	color: #FF3434;
 	font-size: 1.2em;
+	-webkit-transition: all ease-out .3s;
+	transition: all ease-out .3s;
+}
+#intro h3:hover>a {
+	margin-left: 30px;
+	text-shadow: 1px 0px 1px #A1A1A1;
 }
 #intro a[href*="/blog/tags"] {
-	color: #fff;
-	background: #B8B8B8;
-	display: inline-block;
-	padding: 0 6px;
+	color: #b8b8b8;
+	border: 1px solid #b8b8b8;
+	padding: 4px 6px;
 	border-radius: 4px;
 	margin: 0 5px 5px 0;
+	-webkit-transition: all ease .4s;
+	transition: all ease .4s;
+}
+#intro a[href*="/blog/tags"]:hover {
+	background: #B8B8B8;
+	color: #fff;
 }
