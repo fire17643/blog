@@ -17,12 +17,12 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015 | 黃志文的博客</title>
+  <title>z-index 应用简单总结 | firestfly</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="黃志文的博客">
+    <meta name="generator" content="firestfly">
     <meta name="author" content="黃志文">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -30,7 +30,7 @@
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="firestfly" type="application/atom+xml">
     <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
 	
     <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
@@ -66,7 +66,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -78,15 +78,15 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <li><a href="/blog/" class="animsition-link" title="Home">首页</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">文章</a></li>
             <!-- Dropdown Menu -->
 			 
             <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">我的工作<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">前端</a></li>
                     
                         <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
@@ -95,10 +95,10 @@
             
             
         	<li>
-        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+        		<a class="sb-toggle-submenu">分类<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(17)</small></a></li>
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(24)</small></a></li>
 				    
 				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
 				    
@@ -107,7 +107,7 @@
 			
             
             <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">友链<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
@@ -120,8 +120,8 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
-            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">关于</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">订阅</a></li>
         </ul>
     </div>
     
@@ -139,7 +139,7 @@
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
+                        <a href="/blog" title="Logo" class="animsition-link">
                          <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog" class="animsition-link" title="Always Creative.">firestfly</a></li>
                             <li><a href="/blog/archives" title="所有文章">文章</a></li>
                             <li><a href="/blog/tags" title="标签">标签</a></li>
                             <li><a href="/blog/about" title="关于我">关于</a></li>
@@ -161,7 +161,7 @@
                             
                             
                             
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
                             -->
                             <li class="nolink"><span>Welcome!</span></li>
@@ -214,115 +214,94 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/HTML5 Page Visibility/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T06:01:18.358Z"><a href="/blog/2015/06/17/HTML5 Page Visibility/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2015-06-17T06:00:18.729Z"><a href="/blog/2015/06/17/hello-world/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/JavaScript操作Excel/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:59:57.811Z"><a href="/blog/2015/06/17/JavaScript操作Excel/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/Javascript 操作select控件大全（新增、修改、删除、选中、清空、判断存在等）/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:59:51.174Z"><a href="/blog/2015/06/17/Javascript 操作select控件大全（新增、修改、删除、选中、清空、判断存在等）/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/iframe高度自适应内容/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:36:43.695Z"><a href="/blog/2015/06/17/iframe高度自适应内容/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/励志篇-毕业5年决定你的命运/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:35:41.789Z"><a href="/blog/2015/06/17/励志篇-毕业5年决定你的命运/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/培养8种让自己受益一生的技能/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:32:46.476Z"><a href="/blog/2015/06/17/培养8种让自己受益一生的技能/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/HTTP 状态码解释/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T05:32:06.049Z"><a href="/blog/2015/06/17/HTTP 状态码解释/">06/17 2015</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/blog/2015/06/17/3d-cube/"></a></h4>
-                            
-                            <p><time datetime="2015-06-17T03:30:37.774Z"><a href="/blog/2015/06/17/3d-cube/">06/17 2015</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-06-24T06:29:47.657Z" itemprop="datePublished">
+          06/24/2015
+      </time>
+    
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
+</span>
+                <h1>z-index 应用简单总结</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 clearfix col-md-offset-2">
+      		<p>做过页面布局的同学对z-index属性应该是很熟悉了，z-index是针对网页显示中的一个特殊属性。因为显示器是显示的图案是一个二维平面，拥有x轴和y轴来表示位置属性。为了表示三维立体的概念如显示元素的上下层的叠加顺序引入了z-index属性来表示z轴的区别。表示一个元素在叠加顺序上的上下立体关系。</p>
+<p>z-index值较大的元素将叠加在z-index值较小的元素之上。对于未指定此属性的定位对象，z-index 值为正数的对象会在其之上，而 z-index 值为负数的对象在其之下。</p>
+<p>简单演示</p>
+<div style="width:200px;height:200px;background-color:#0e0;"></div><br><div style="position:relative; top:-50px; width:100px;height:100px;background-color:#00e;"></div>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+<p>两个DIV，第二个向上移动50px，正常情况应该是这样的</p>
+<p>第二个div遮住了第一个div，对第二个添加z-index属性</p>
+<div style="width:200px;height:200px;background-color:#0e0;"></div><br><div style="position:relative; top:-50px; width:100px;height:100px;background-color:#00e;z-index:-5;"></div>
+
+<p>结果就会变成这个样子，z-index 最简单的应用就是这样</p>
+<p>只对定位元素有效<br>z-index属性适用于定位元素（position属性值为 relative 或 absolute 或 fixed的对象），用来确定定位元素在垂直于显示屏方向（称为Z轴）上的层叠顺序，也就是说如果元素是没有定位的，对其设置的z-index会是无效的。</p>
+<div style="width:200px;height:200px;background-color:#0e0;z-index:30"></div><br><div style="position:relative; top:-50px; width:100px;height:100px;background-color:#00e;z-index:10;"></div>
+
+<p>虽然第一个div的z-index比第二个div大，但是由于第一个div未定位，其z-index属性未起作用，所以仍然会被第二个div覆盖。</p>
+<p>相同z-index谁上谁下<br>相同的z-index其实有两种情况</p>
+<p>1.如果两个元素都没有定位发生位置重合现象或者两个都已定位元素且z-index相同发生位置重合现象，那么按文档流顺序，后面的覆盖前面的。</p>
+<div style="position:relative;width:200px;height:200px;background-color:#0e0;"></div><br><div style="position:relative; top:-50px; width:100px;height:100px;background-color:#00e;"></div>
+
+<p>2.如果两个元素都没有设置z-index，使用默认值，一个定位一个没有定位，那么定位元素覆盖未定位元素</p>
+<div style="position:relative;top:50px;width:200px;height:200px;background-color:#0e0;"></div><br><div style=" width:100px;height:100px;background-color:#00e;"></div>
+
+<p>父子关系处理<br>如果父元素z-index有效，那么子元素无论是否设置z-index都和父元素一致，会在父元素上方</p>
+<div style="position:relative;width:200px;height:200px;background-color:#0e0;z-index:10;"><br><div style="position:relative;width:100px;height:100px;background-color:#00e;z-index:-5;"></div></div>
+
+<p>虽然子元素设置z-index比父元素小，但是子元素仍然出现在父元素上方</p>
+<p>如果父元素z-index失效（未定位或者使用默认值），那么定位子元素的z-index设置生效</p>
+<div style="position:relative;width:200px;height:200px;background-color:#0e0;"><br>    <div style="position:relative;width:100px;height:100px;background-color:#00e;z-index:-5;"></div><br></div>
+
+<p>子元素z-index=-5生效，被父元素覆盖</p>
+<p>兄弟之间子元素<br>如果兄弟元素的z-index生效，那么其子元素覆盖关系有父元素决定</p>
+<div style="position:relative;width:100px;height:100px;background-color:#0e0;z-index:5;"><br>    <div style="position:relative;width:50px;height:250px;background-color:#00e;z-index:50;"></div><br></div><br><div style="position:relative;width:100px;height:100px;background-color:#0e0;z-index:10;margin-top:4px;"><br>    <div style="position:relative;width:30px;height:150px;background-color:#e0e;z-index:-10;"></div><br></div>
+
+<p>虽然第一个div的子元素的z-index比较高，但是由于其父元素z-index比第二个div低，所以第一个div子元素会被第二个div及其子元素覆盖</p>
+<p>应用<br>经常会有这样一种错误在table中最后各行一个td放一个div，点击弹出子菜单做一些删除、修改什么的操作，但是每次弹出的菜单都会被下面各行的div覆盖,像下面这张图一样，弹出的菜单没有在页面最上方。</p>
+<p>本文的例子都是以符合W3C的Chrome浏览器做验证，但在IE6，7 z-index的默认值并不是auto而是0，这样会导致很多奇怪现象，这时候就需要考虑这点了。</p>
+
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/blog/2015/06/24/sum/运算符优先级总结/" style="float: left;">
+        ← 运算符的优先级总结
+    </a>
+    
+    
+    <a class="pull-right" href="/blog/2015/06/24/iframe高度自适应内容/">
+        iframe高度自适应内容 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/06/24/z-index应用简单总结/" data-title="z-index 应用简单总结" data-url="http://fire17643.github.io/2015/06/24/z-index应用简单总结/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"firest"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
@@ -344,7 +323,7 @@
                     
                     
                     
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>

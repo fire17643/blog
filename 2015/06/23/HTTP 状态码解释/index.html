@@ -17,12 +17,12 @@
 <!--<![endif]-->
 
 <head>
-  <title>黃志文的博客</title>
+  <title>HTTP 状态码解释 | firestfly</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="黃志文的博客">
+    <meta name="generator" content="firestfly">
     <meta name="author" content="黃志文">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -30,7 +30,7 @@
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="firestfly" type="application/atom+xml">
     <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
 	
     <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
@@ -78,15 +78,15 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <li><a href="/blog/" class="animsition-link" title="Home">首页</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">文章</a></li>
             <!-- Dropdown Menu -->
 			 
             <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">我的工作<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">前端</a></li>
                     
                         <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
@@ -95,10 +95,10 @@
             
             
         	<li>
-        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+        		<a class="sb-toggle-submenu">分类<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(17)</small></a></li>
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(24)</small></a></li>
 				    
 				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
 				    
@@ -107,7 +107,7 @@
 			
             
             <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">友链<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
@@ -120,8 +120,8 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
-            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">关于</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">订阅</a></li>
         </ul>
     </div>
     
@@ -139,7 +139,7 @@
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
+                        <a href="/blog" title="Logo" class="animsition-link">
                          <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog" class="animsition-link" title="Always Creative.">firestfly</a></li>
                             <li><a href="/blog/archives" title="所有文章">文章</a></li>
                             <li><a href="/blog/tags" title="标签">标签</a></li>
                             <li><a href="/blog/about" title="关于我">关于</a></li>
@@ -161,7 +161,7 @@
                             
                             
                             
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
                             -->
                             <li class="nolink"><span>Welcome!</span></li>
@@ -219,16 +219,21 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2015-06-17T05:32:06.049Z" itemprop="datePublished">
-          06/17 2015
+      <time datetime="2015-06-23T02:18:12.268Z" itemprop="datePublished">
+          06/23/2015
       </time>
     
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
 </span>
-                <h1></h1>
+                <h1>HTTP 状态码解释</h1>
             </div>
         </div>
         <div class="col-md-8 clearfix col-md-offset-2">
-      		<p>HTTP 状态码解释<br>在介绍各种代码之前，首先科普一下，上面的各种代码，是 HTTP 状态码，用以表示网页服务器 HTTP 响应状态的3位数字代码，包含五种状态状态， 1xx 代表消息， 2xx 代表成功， 3xx 代表重定向， 4xx 代表请求错误， 5xx 代表服务器错误。下面 Kayo 为大家详细介绍各个状态码的意义。其中下面各行开头的数字代表各状态码，括号内的内容表示状态信息及其中文翻译，接着是代码含义。</p>
+      		<p>在介绍各种代码之前，首先科普一下，上面的各种代码，是 HTTP 状态码，用以表示网页服务器 HTTP 响应状态的3位数字代码，包含五种状态状态， 1xx 代表消息， 2xx 代表成功， 3xx 代表重定向， 4xx 代表请求错误， 5xx 代表服务器错误。下面 Kayo 为大家详细介绍各个状态码的意义。其中下面各行开头的数字代表各状态码，括号内的内容表示状态信息及其中文翻译，接着是代码含义。</p>
 <p>100 (Continue/继续)：请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。HTTP 1.1 中新加入。</p>
 <p>101 (Switching Protocols/切换协议)：服务器已经理解了客户端的请求，并将通过 Upgrade 消息头通知客户端采用不同的协议来完成这个请求。HTTP 1.1 中新加入。</p>
 <p>200 (OK/正常)：请求已成功，请求所希望的响应头或数据体将随此响应返回。</p>
@@ -274,19 +279,19 @@
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/blog/2015/06/17/培养8种让自己受益一生的技能/" style="float: left;">
-        ← 
+    <a class="pull-left" href="/blog/2015/06/23/FireBug控制台指令/" style="float: left;">
+        ← Firebug 控制台指令
     </a>
     
     
-    <a class="pull-right" href="/blog/2015/06/17/3d-cube/">
-         →
+    <a class="pull-right" href="/blog/2015/06/23/js-Map对象/">
+        Map 对象 (JavaScript) →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/06/17/HTTP 状态码解释/" data-title="" data-url="http://fire17643.github.io/2015/06/17/HTTP 状态码解释/"></div>
+<div class="ds-thread" data-thread-key="2015/06/23/HTTP 状态码解释/" data-title="HTTP 状态码解释" data-url="http://fire17643.github.io/2015/06/23/HTTP 状态码解释/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"firest"};
 (function() {
@@ -324,7 +329,7 @@ var duoshuoQuery = {short_name:"firest"};
                     
                     
                     
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>

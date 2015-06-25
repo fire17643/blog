@@ -17,12 +17,12 @@
 <!--<![endif]-->
 
 <head>
-  <title>黃志文的博客</title>
+  <title>运算符的优先级总结 | firestfly</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="黃志文的博客">
+    <meta name="generator" content="firestfly">
     <meta name="author" content="黃志文">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -30,7 +30,7 @@
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/blog/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="黃志文的博客" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="firestfly" type="application/atom+xml">
     <link rel="stylesheet" href="/blog/css/all.css" media="screen" type="text/css">
 	
     <link rel="stylesheet" href="/blog/highlightjs/monokai_sublime.css" type="text/css">
@@ -78,15 +78,15 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/blog/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/blog/archives" class="animsition-link" title="archive">archives</a></li>
+            <li><a href="/blog/" class="animsition-link" title="Home">首页</a></li>
+            <li><a href="/blog/archives" class="animsition-link" title="archive">文章</a></li>
             <!-- Dropdown Menu -->
 			 
             <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">我的工作<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/blog/" target="_BLANK" class="animsition-link">web</a></li>
+                        <li><a href="/blog/" target="_BLANK" class="animsition-link">前端</a></li>
                     
                         <li><a href="/blog/atom.xml" target="_BLANK" class="animsition-link">订阅</a></li>
                     
@@ -95,10 +95,10 @@
             
             
         	<li>
-        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+        		<a class="sb-toggle-submenu">分类<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(17)</small></a></li>
+				    <li><a href="/blog/categories/前端/" class="animsition-link">前端<small>(24)</small></a></li>
 				    
 				    <li><a href="/blog/categories/生活/" class="animsition-link">生活<small>(2)</small></a></li>
 				    
@@ -107,7 +107,7 @@
 			
             
             <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <a class="sb-toggle-submenu">友链<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
                     <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
@@ -120,8 +120,8 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="/blog/about" class="animsition-link" title="about">About</a></li>
-            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <li><a href="/blog/about" class="animsition-link" title="about">关于</a></li>
+            <li><a href="/blog/atom.xml" class="animsition-link" title="rss">订阅</a></li>
         </ul>
     </div>
     
@@ -139,7 +139,7 @@
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
+                        <a href="/blog" title="Logo" class="animsition-link">
                          <img src="/blog/img/logo.png" alt="Logo" width="35px;"/> 
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link" title="Always Creative.">黃志文的博客</a></li>
+                            <li><a href="/blog" class="animsition-link" title="Always Creative.">firestfly</a></li>
                             <li><a href="/blog/archives" title="所有文章">文章</a></li>
                             <li><a href="/blog/tags" title="标签">标签</a></li>
                             <li><a href="/blog/about" title="关于我">关于</a></li>
@@ -161,7 +161,7 @@
                             
                             
                             
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
                             -->
                             <li class="nolink"><span>Welcome!</span></li>
@@ -219,145 +219,41 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2015-06-17T05:36:43.695Z" itemprop="datePublished">
-          06/17 2015
+      <time datetime="2015-06-24T07:59:47.030Z" itemprop="datePublished">
+          06/24/2015
       </time>
     
+    
+    | 
+    <a href='/blog/tags/js/'>js</a>
+    
+    
 </span>
-                <h1></h1>
+                <h1>运算符的优先级总结</h1>
             </div>
         </div>
         <div class="col-md-8 clearfix col-md-offset-2">
-      		<p>iframe高度自适应内容<br>演示一（如果在同个顶级域名下，不同子域名之间互通信息，设置document.domain=”caibaojian.com”<br>只要修改以上的iframe的ID即可了。或者你可以直接在iframe里面写代码，我们一般为了不污染HTML代码，建议使用上面的代码。</p>
-<pre class="language-markup">
-<code class="language-markup">
-&lt;iframe src="backtop.html" frameborder="0" scrolling="no" id="external-frame" onload="setIframeHeight(this)">&lt;/iframe&gt;
-</code>
-</pre>
-演示二
-<pre class="language-javascript">
-<code class="language-javascript">
-&lt;script language="javascript"&gt;
-//输入你希望根据页面高度自动调整高度的iframe的名称的列表
-//用逗号把每个iframe的ID分隔. 例如: ["myframe1", "myframe2"]，可以只有一个窗体，则不用逗号。
-//定义iframe的ID
-var iframeids=["test"];
-//如果用户的浏览器不支持iframe是否将iframe隐藏 yes 表示隐藏，no表示不隐藏
-var iframehide="yes";
-function dyniframesize(){
-    var dyniframe=new Array();
-    for (i=0; i&lt;iframeids.length; i++){
-        if (document.getElementById){
-            //自动调整iframe高度
-            dyniframe[dyniframe.length] = document.getElementById(iframeids[i]);
-            if (dyniframe[i] && !window.opera){
-                dyniframe[i].style.display="block";
-                if (dyniframe[i].contentDocument && dyniframe[i].contentDocument.body.offsetHeight){ //如果用户的浏览器是NetScape
-                    dyniframe[i].height = dyniframe[i].contentDocument.body.offsetHeight;
-                }else if(dyniframe[i].Document && dyniframe[i].Document.body.scrollHeight){ //如果用户的浏览器是IE
-                    dyniframe[i].height = dyniframe[i].Document.body.scrollHeight;
-                }
-            }
-        }
-        //根据设定的参数来处理不支持iframe的浏览器的显示问题
-        if ((document.all || document.getElementById) && iframehide=="no"){
-            var tempobj=document.all? document.all[iframeids[i]] : document.getElementById(iframeids[i]);
-            tempobj.style.display="block";
-        }
-    }
-}
-if (window.addEventListener){
-    window.addEventListener("load", dyniframesize, false);
-}else if (window.attachEvent){
-    window.attachEvent("onload", dyniframesize);
-}else{
-    window.onload=dyniframesize;
-}
-&lt;/script &gt;    
-</code>
-</pre>
+      		<table width="100%"><tr><th>&nbsp;</th><th>运算符</th><th>描述</th></tr><tr><th>1</th><td>. [] ()</td><td>字段访问、数组下标、函数调用以及表达式分组</td></tr><tr><th>2</th><td>++ &#8212; &#8211; ~ ! delete new typeof void</td><td>一元运算符、返回数据类型、对象创建、未定义值</td></tr><tr><th>3</th><td>* / %</td><td>乘法、除法、取模<em>(左结合L)</em></td></tr><tr><th>4</th><td>+ &#8211; +</td><td>加法、减法、字符串连接<em>(左结合L)</em></td></tr><tr><th>5</th><td>&lt; &lt; &gt;&gt; &gt;&gt;&gt;</td><td>移位</td></tr><tr><th>6</th><td>&lt; &lt;= &gt; &gt;= instanceof</td><td>小于、小于等于、大于、大于等于、instanceof<em>(左结合L)</em></td></tr><tr><th>7</th><td>== != === !==</td><td>等于、不等于、严格相等、非严格相等<em>(左结合L)</em></td></tr><tr><th>8</th><td>&amp;</td><td>按位与</td></tr><tr><th>9</th><td>^</td><td>按位异或</td></tr><tr><th>10</th><td>|</td><td>按位或</td></tr><tr><th>11</th><td>&amp;&amp;</td><td>逻辑与<em>(左结合L)</em></td></tr><tr><th>12</th><td>||</td><td>逻辑或<em>(左结合L)</em></td></tr><tr><th>13</th><td>?:</td><td>条件</td></tr><tr><th>14</th><td>= += -=</td><td>赋值、运算赋值</td></tr><tr><th>15</th><td>,</td><td>多重求值</td></tr></table>     
 
-<p>演示三</p>
-<pre class="language-javascript">
-<code class="language-javascript">
-function iframeAutoFit(iframeObj){
-    setTimeout(function(){
-        if(!iframeObj) return;
-        iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
-    },200)
-}
-</code>
-</pre>
-
-<p>演示四</p>
-<pre class="language-markup">
-<code class="language-markup">
-&lt;iframe src="backtop.html" frameborder="0" scrolling="no" id="test" onload="this.height=100">&lt;/iframe>
-</code>
-</pre>
-<pre class="language-javascript">
-<code class="language-javascript">
-&lt;script type="text/javascript">
-function reinitIframe(){
-    var iframe = document.getElementById("test");
-    try{
-        var bHeight = iframe.contentWindow.document.body.scrollHeight;
-        var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-        var height = Math.max(bHeight, dHeight);
-        iframe.height = height;
-        console.log(height);
-    }catch (ex){}
-}
-window.setInterval("reinitIframe()", 200);
-&lt;/script>
-</code>
-</pre>
-
-<p>演示五<br>打开调试运行窗口可以看到运行。</p>
-<p>跨域的时候，由于js的同源策略，父页面内的js不能获取到iframe页面的高度。需要一个页面来做代理。<br>方法如下：假设www.a.com下的一个页面a.html要包含www.b.com下的一个页面c.html。<br>我们使用www.a.com下的另一个页面agent.html来做代理，通过它获取iframe页面的高度，并设定iframe元素的高度。</p>
-<p>a.html中包含iframe:</p>
-<pre class="language-markup">
-<code class="language-markup">
-&lt;iframe src="http://www.b.com/c.html" id="Iframe" frameborder="0" scrolling="no" style="border:0px;">&lt;/iframe>
-在c.html中加入如下代码：
-
-&lt;iframe id="c_iframe"  height="0" width="0"  src="http://www.a.com/agent.html" style="display:none" >&lt;/iframe>
-</code>
-</pre>
-
-<pre class="language-javascript">
-<code class="language-javascript">
-&lt;script type="text/javascript">
-(function autoHeight(){
-    var b_width = Math.max(document.body.scrollWidth,document.body.clientWidth);
-    var b_height = Math.max(document.body.scrollHeight,document.body.clientHeight);
-    var c_iframe = document.getElementById("c_iframe");
-    c_iframe.src = c_iframe.src + "#" + b_width + "|" + b_height;  // 这里通过hash传递b.htm的宽高
-})();
-&lt/script>
-</code>
-</pre>
-
-<p>最后，agent.html中放入一段js:</p>
-<p><pre class="language-javascript"><br><code class="language-javascript"><br>&lt;script type=”text/javascript”&gt;<br>var b_iframe = window.parent.parent.document.getElementById(“Iframe”);<br>var hash_url = window.location.hash;<br>if(hash_url.indexOf(“#”)&gt;=0){<br>    var hash_width = hash_url.split(“#”)[1].split(“|”)[0]+”px”;<br>    var hash_height = hash_url.split(“#”)[1].split(“|”)[1]+”px”;<br>    b_iframe.style.width = hash_width;<br>    b_iframe.style.height = hash_height;<br>}<br>&lt;/script&gt;<br></code><br></pre><br>agent.html从URL中获得宽度值和高度值，并设置iframe的高度和宽度（因为agent.html在www.a.com下，所以操作a.html时不受JavaScript的同源限制）</p>
+<p>先做个简单的例子<br><code>++&#39;52&#39;.split(&#39;&#39;)[0]</code><br>结果是多少？</p>
+<p>看了这个题目才知道自己对运算符优先级掌握的程度不够，先总结下:</p>
+<p>从上表可以看出点.以及[]要比++的优先级高。因此，这里的问题等同于：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span>;</span><br><span class="line"><span class="literal">result</span> = <span class="string">"52"</span>.split(<span class="string">""</span>);  // [<span class="string">"5"</span>, <span class="string">"2"</span>]</span><br><span class="line"><span class="literal">result</span> = <span class="literal">result</span>[<span class="number">0</span>]; // <span class="string">"5"</span></span><br><span class="line"><span class="literal">result</span> = ++<span class="literal">result</span>;  // <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">2</span>*<span class="number">3</span>;<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">typeof</span> (<span class="number">2</span>*<span class="number">3</span>);<span class="comment">//"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">2</span>+<span class="number">3</span>;<span class="comment">// "number3"</span></span><br></pre></td></tr></table></figure>
+<p>注意：<br>    虽然说<code>++[&quot;5&quot;, &quot;2&quot;][0]</code>的返回值是6, 但是直接++”5”或者++5却是会报错的（FireBug控制台显示“invalid increment operand”错误），据说是因为只有变量才能++ 而’5’只是一个字符串。</p>
 
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/blog/2015/06/17/Javascript 操作select控件大全（新增、修改、删除、选中、清空、判断存在等）/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/blog/2015/06/17/励志篇-毕业5年决定你的命运/">
-         →
+    <a class="pull-right" href="/blog/2015/06/24/z-index应用简单总结/">
+        z-index 应用简单总结 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/06/17/iframe高度自适应内容/" data-title="" data-url="http://fire17643.github.io/2015/06/17/iframe高度自适应内容/"></div>
+<div class="ds-thread" data-thread-key="2015/06/24/sum/运算符优先级总结/" data-title="运算符的优先级总结" data-url="http://fire17643.github.io/2015/06/24/sum/运算符优先级总结/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"firest"};
 (function() {
@@ -395,7 +291,7 @@ var duoshuoQuery = {short_name:"firest"};
                     
                     
                     
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    <li><a href="http://weibo.com/u/2837571802" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>

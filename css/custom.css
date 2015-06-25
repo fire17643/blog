@@ -3,15 +3,18 @@
 .herofade {
 	opacity: .2;
 }
-#intro h3>a {
+#intro h3 a {
 	color: #FF3434;
 	font-size: 1.2em;
-	-webkit-transition: all ease-out .3s;
-	transition: all ease-out .3s;
+	display: inline-block;
 }
-#intro h3:hover>a {
-	margin-left: 30px;
-	text-shadow: 1px 0px 1px #A1A1A1;
+#intro p {
+	overflow-x: hidden;
+}
+#intro h3:hover a {
+	margin-top: -2px;
+	border-top: 2px solid #FF3434;
+	border-bottom: 2px solid #FF3434;
 }
 #intro a[href*="/blog/tags"] {
 	color: #b8b8b8;
